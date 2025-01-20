@@ -1,39 +1,66 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+		<!-- CSRF Token -->
+		<meta content="{{ csrf_token() }}" name="csrf-token">
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+		<title>{{ config('app.name') }}</title>
 
-    <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-</head>
-<body>
-    <div id="preloader"></div>
+		@if (env('APP_ENV') === 'production')
+			<link href="{{ asset('build/assets/app-XXX.css') }}" rel="stylesheet">
+			<link href="{{ asset('build/assets/app-XXX.css') }}" rel="stylesheet">
+			<link href="{{ asset('build/assets/anyar-XXX.css') }}" rel="stylesheet">
+		@else
+			@vite([
+				'resources/js/app.js',
+				'resources/sass/app.scss',
+				'resources/js/theme/anyar.js',
+				'resources/sass/theme/anyar.scss',
+			])
+		@endif
 
-    @include('layouts.theme.anyar.header')
+		@livewireStyles
+		@stack('CSS')
+	</head>
 
-    @include('layouts.theme.anyar.aside-left')
+	<body>
+		<div id="preloader"></div>
 
-    <main class="main" id="main">
-        @yield('content')
-    </main>
+		@include('layouts.theme.anyar.template.header')
 
-    @include('layouts.theme.anyar.aside-right')
+		@include('layouts.theme.anyar.template.aside-left')
 
-    @include('layouts.theme.anyar.footer')
+		@yield('banner')
+			
+		<main class="main" id="main">
+			@yield('breadcrumb')
+			@yield('content')
+		</main>
 
-    {{-- BUTTON: BACK TO TOP --}}
-	<a href="#" class="back-to-top d-flex align-items-center justify-content-center">
-        <i class="bi bi-arrow-up-short"></i>
-    </a>
-</body>
+		@include('layouts.theme.anyar.template.aside-right')
+
+		@include('layouts.theme.anyar.template.footer')
+
+		{{-- BUTTON: BACK TO TOP --}}
+		<a class="back-to-top d-flex align-items-center justify-content-center" href="#">
+			<i class='bx bxs-up-arrow'></i>
+		</a>
+		
+		@livewire('modal.create')
+		@livewire('modal.update')
+		@livewire('modal.delete')
+		
+		@if (env('APP_ENV') === 'production')
+			<script src="{{ asset('build/assets/app-XXX.js') }}"></script>
+			<script src="{{ asset('build/assets/anyar-XXX.js') }}"></script>
+		@endif
+	
+		@livewireScripts
+		@stack('JS')
+	</body>
+
 </html>

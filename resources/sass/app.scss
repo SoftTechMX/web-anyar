@@ -1,8 +1,24 @@
 // Fonts
-@import url('https://fonts.bunny.net/css?family=Nunito');
+// @import url('https://fonts.bunny.net/css?family=Nunito');
 
 // Variables
 @import 'variables';
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+
+// Boxicons
+// Icon List: https://boxicons.com/
+// URL: https://boxicons.com/usage
+// CMD: npm install boxicons --save
+@import 'boxicons/css/boxicons.min';
+
+// GLightbox
+// URL: https://www.npmjs.com/package/glightbox
+// CMD: npm install glightbox --save
+@import 'glightbox/dist/css/glightbox.min';
+
+// Toastr
+// https://www.npmjs.com/package/toastr
+// CMD: npm i toastr --save
+@import 'toastr/toastr';

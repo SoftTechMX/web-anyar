@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -21,8 +21,23 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function landing()
     {
-        return view('home');
+        return view('page.landing');
+    }
+
+    public function details()
+    {
+        return view('page.details');
+    }
+
+    public function blog()
+    {
+        return view('page.blog');
+    }
+
+    public function blog_single()
+    {
+        return view('page.blog-single');
     }
 }

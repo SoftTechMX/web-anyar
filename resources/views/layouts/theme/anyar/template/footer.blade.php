@@ -10,9 +10,7 @@
 					</p>
 				</div>
 				<div class="col-lg-6">
-					<form action="" method="post">
-						<input name="email" type="email" /><input type="submit" value="Subscribe" />
-					</form>
+					<livewire:form.suscribe />
 				</div>
 			</div>
 		</div>
