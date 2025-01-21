@@ -1484,16 +1484,28 @@ section {
 }
 
 .pricing .advanced {
-	width: 200px;
-	position: absolute;
-	top: 18px;
-	right: -68px;
-	transform: rotate(45deg);
-	z-index: 1;
-	font-size: 14px;
-	padding: 1px 0 3px 0;
-	background: #0880e8;
-	color: #fff;
+    width: 200px;
+    position: absolute;
+    top: 18px;
+    right: -68px;
+    transform: rotate(45deg);
+    z-index: 1;
+    font-size: 14px;
+    padding: 1px 0 3px 0;
+    background: #e80808;
+    color: #fff;
+    font-weight: bold;
+    animation: heartbeat 1.5s infinite ease-in-out;
+}
+
+/* Animación de latidos */
+@keyframes heartbeat {
+    0%, 100% {
+        transform: rotate(45deg) scale(1); /* Tamaño normal */
+    }
+    50% {
+        transform: rotate(45deg) scale(1.2); /* Tamaño más grande */
+    }
 }
 
 /*--------------------------------------------------------------
