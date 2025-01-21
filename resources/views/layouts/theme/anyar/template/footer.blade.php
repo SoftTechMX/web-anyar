@@ -3,10 +3,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6">
-					<h4>Our Newsletter</h4>
+					<h4>
+						{{ __('Suscribe Now') }}
+					</h4>
 					<p>
-						Tamen quem nulla quae legam multos aute sint
-						culpa legam noster magna
+						{{ __('Enter your email address to receive notifications and exclusive promotions from our alert newsletter.') }}
 					</p>
 				</div>
 				<div class="col-lg-6">
