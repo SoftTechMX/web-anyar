@@ -8,12 +8,19 @@ use Illuminate\View\Component;
 
 class Breadcrumb extends Component
 {
-    /**
-     * Create a new component instance.
-     */
-    public function __construct()
+    public $titulo;
+    public $url;
+    public $url_exploded;
+
+    public function __construct(?string $titulo = null, ?string $url = null)
     {
-        //
+        $this->titulo = $titulo;
+        $this->url = $url;
+
+        if($url)
+            $this->url_exploded = explode('/', $url);
+        else
+            $this->url_exploded = [];
     }
 
     /**
