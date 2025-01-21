@@ -70,72 +70,40 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
-					<div class="icon-box">
-						<div class="icon">
-							<i class="bx bxl-dribbble"></i>
-						</div>
-						<h4 class="title">
-							<a href="">Lorem Ipsum</a>
-						</h4>
-						<p class="description">
-							Voluptatum deleniti atque corrupti quos
-							dolores et quas molestias excepturi sint
-							occaecati cupiditate non provident
-						</p>
-					</div>
+					<x-theme.anyar.icon-box
+						icono="bx bx-edit-alt"
+						titulo="Customizable Template" 
+						descripcion="Edit the template to your needs with ease, effortlessly using a cPanel." 
+					/>
 				</div>
 
 				<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos-delay="100" data-aos="fade-up">
-					<div class="icon-box">
-						<div class="icon">
-							<i class="bx bx-file"></i>
-						</div>
-						<h4 class="title">
-							<a href="">Sed ut perspiciatis</a>
-						</h4>
-						<p class="description">
-							Duis aute irure dolor in reprehenderit in
-							voluptate velit esse cillum dolore eu fugiat
-							nulla pariatur
-						</p>
-					</div>
+					<x-theme.anyar.icon-box
+						icono="bx bx-user"
+						titulo="Role and Permission Management" 
+						descripcion="With a user roles and permissions mechanism you can accurately manage each user's privileges." 
+					/>
 				</div>
 
 				<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos-delay="200" data-aos="fade-up">
-					<div class="icon-box">
-						<div class="icon">
-							<i class="bx bx-tachometer"></i>
-						</div>
-						<h4 class="title">
-							<a href="">Magni Dolores</a>
-						</h4>
-						<p class="description">
-							Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt
-							mollit anim id est laborum
-						</p>
-					</div>
+					<x-theme.anyar.icon-box
+						icono="bx bx-plug"
+						titulo="Modular Based System" 
+						descripcion="Our module-based system allows you to enable and disable sections using switches in the cPanel." 
+					/>
 				</div>
 
 				<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos-delay="300" data-aos="fade-up">
-					<div class="icon-box">
-						<div class="icon">
-							<i class="bx bx-layer"></i>
-						</div>
-						<h4 class="title"><a href="">Nemo Enim</a></h4>
-						<p class="description">
-							At vero eos et accusamus et iusto odio
-							dignissimos ducimus qui blanditiis
-							praesentium voluptatum deleniti atque
-						</p>
-					</div>
+					<x-theme.anyar.icon-box
+						icono="bx bx-support"
+						titulo="Constant Updates" 
+						descripcion="Receive constant updates, technical support and access to many resources such as video tutorials, code documentation, ER diagrams and more." 
+					/>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!-- End Icon Boxes Section -->
 
-	<!-- ======= About Us Section ======= -->
 	<section class="about" id="about">
 		<div class="container" data-aos="fade-up">
 			<div class="section-title">
