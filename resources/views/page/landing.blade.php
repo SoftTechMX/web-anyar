@@ -824,27 +824,35 @@
 	<section class="contact" id="contact">
 		<div class="container" data-aos="fade-up">
 			<div class="section-title">
-				<h2>Contact Us</h2>
+				<h2>
+					{{ __('Contact Us') }}
+				</h2>
 			</div>
 
 			<div class="row mt-1 d-flex justify-content-end" data-aos-delay="100" data-aos="fade-right">
 				<div class="col-lg-5">
 					<div class="info">
 						<div class="address">
-							<i class="bi bi-geo-alt"></i>
-							<h4>Location:</h4>
+							<i class='bx bx-map'></i>
+							<h4>
+								{{ __('Location') }}:
+							</h4>
 							<p>A108 Adam Street, New York, NY 535022</p>
 						</div>
 
 						<div class="email">
-							<i class="bi bi-envelope"></i>
-							<h4>Email:</h4>
+							<i class='bx bx-envelope' ></i>
+							<h4>
+								{{ ('Email') }}:
+							</h4>
 							<p>soft.tech.mexico@gmail.com</p>
 						</div>
 
 						<div class="phone">
-							<i class="bi bi-phone"></i>
-							<h4>Call:</h4>
+							<i class='bx bxs-phone-call' ></i>
+							<h4>
+								{{ __('Telephone') }}:
+							</h4>
 							<p>+1 5589 55488 55s</p>
 						</div>
 					</div>
@@ -856,5 +864,4 @@
 			</div>
 		</div>
 	</section>
-	<!-- End Contact Section -->
 @endsection
