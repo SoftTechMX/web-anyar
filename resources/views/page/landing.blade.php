@@ -107,7 +107,9 @@
 	<section class="about" id="about">
 		<div class="container" data-aos="fade-up">
 			<div class="section-title">
-				<h2>About Us</h2>
+				<h2>
+					{{ __('About Us') }}
+				</h2>
 				<p>
 					Magnam dolores commodi suscipit. Necessitatibus eius
 					consequatur ex aliquid fuga eum quidem. Sit sint
@@ -157,9 +159,7 @@
 			</div>
 		</div>
 	</section>
-	<!-- End About Us Section -->
 
-	<!-- ======= Clients Section ======= -->
 	<section class="clients" id="clients">
 		<div class="container" data-aos="zoom-in">
 			<div class="clients-slider swiper">
@@ -645,9 +645,7 @@
 			</div>
 		</div>
 	</section>
-	<!-- End Team Section -->
 
-	<!-- ======= Pricing Section ======= -->
 	<section class="pricing" id="pricing">
 		<div class="container" data-aos="fade-up">
 			<div class="section-title">
@@ -734,7 +732,6 @@
 			</div>
 		</div>
 	</section>
-	<!-- End Pricing Section -->
 
 	<section class="faq section-bg" id="faq">
 		<div class="container" data-aos="fade-up">

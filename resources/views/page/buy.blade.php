@@ -1,0 +1,111 @@
+@extends('layouts.theme.anyar.app')
+
+@section('breadcrumb')
+	<x-theme.anyar.breadcrumb titulo="Buy This Template" url="Home / Buy Template" />
+@endsection
+
+@section('content')
+
+    <section class="pricing" id="pricing">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>
+                    {{ __('Welcome to Our Pricing Page') }}
+                </h2>
+                <p>
+                    {{ __("Explore our flexible pricing options and find the perfect plan for your needs. Whether you're starting a new project or looking to upgrade your current website, our premium web templates are designed to save you time and elevate your online presence.") }}
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-md-6" data-aos-delay="100" data-aos="fade-up">
+                    <div class="box featured">
+                        <h3>{{ __('Free') }}</h3>
+                        <h4>
+                            <sup>$</sup>0.<sup>00</sup>
+                        </h4>
+                        <ul>
+                            <x-theme.anyar.list.item-danger  texto="{{ __('WEB Hosting') }}" />
+                            <x-theme.anyar.list.item-danger  texto="{{ __('Technical Support') }}" />
+                            <x-theme.anyar.list.item-danger  texto="{{ __('cPanel') }}" />
+                            <x-theme.anyar.list.item-danger  texto="{{ __('Documentation') }}" />
+                            <x-theme.anyar.list.item-success texto="{{ __('Source Code CSS') }}" />
+                            <x-theme.anyar.list.item-success texto="{{ __('Source Code HTML') }}" />
+                            <x-theme.anyar.list.item-danger  texto="{{ __('Full Laravel Template Code') }}" />
+                        </ul>
+                        <div class="btn-wrap">
+                            <a class="btn-buy" href="#">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mt-4 mt-md-0" data-aos-delay="200" data-aos="fade-up">
+                    <div class="box featured">
+                        <h3>{{ __('Businessman') }}</h3>
+                        <h4>
+                            <sup>$</sup>500
+                        </h4>
+                        <ul>
+                            <x-theme.anyar.list.item-success texto="{{ __('WEB Hosting') }}" />
+                            <x-theme.anyar.list.item-success texto="{{ __('Technical Support') }}" />
+                            <x-theme.anyar.list.item-success texto="{{ __('cPanel') }}" />
+                            <x-theme.anyar.list.item-success texto="{{ __('Documentation') }}" />
+                            <x-theme.anyar.list.item-danger  texto="{{ __('Source Code CSS') }}" />
+                            <x-theme.anyar.list.item-danger  texto="{{ __('Source Code HTML') }}" />
+                            <x-theme.anyar.list.item-danger  texto="{{ __('Full Laravel Template Code') }}" />
+                        </ul>
+                        <div class="btn-wrap">
+                            <a class="btn-buy" href="#">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos-delay="300" data-aos="fade-up">
+                    <div class="box featured">
+                        <h3>{{ __('Developer') }}</h3>
+                        <h4>
+                            <sup>$</sup>750</span>
+                        </h4>
+                        <ul>
+                            <x-theme.anyar.list.item-danger  texto="{{ __('WEB Hosting') }}" />
+                            <x-theme.anyar.list.item-danger  texto="{{ __('Technical Support') }}" />
+                            <x-theme.anyar.list.item-success texto="{{ __('cPanel') }}" />
+                            <x-theme.anyar.list.item-success texto="{{ __('Documentation') }}" />
+                            <x-theme.anyar.list.item-success texto="{{ __('Source Code CSS') }}" />
+                            <x-theme.anyar.list.item-success texto="{{ __('Source Code HTML') }}" />
+                            <x-theme.anyar.list.item-success texto="{{ __('Full Laravel Template Code') }}" />
+                        </ul>
+                        <div class="btn-wrap">
+                            <a class="btn-buy" href="#">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos-delay="400" data-aos="fade-up">
+                    <div class="box featured">
+                        <span class="advanced">
+                            Offer
+                        </span>
+                        <h3>{{ __('Premium') }}</h3>
+                        <h4>
+                            <sup>$</sup>800
+                        </h4>
+                        <ul>
+                            <x-theme.anyar.list.item-success texto="{{ __('WEB Hosting') }}" />
+                            <x-theme.anyar.list.item-success texto="{{ __('Technical Support') }}" />
+                            <x-theme.anyar.list.item-success texto="{{ __('cPanel') }}" />
+                            <x-theme.anyar.list.item-success texto="{{ __('Documentation') }}" />
+                            <x-theme.anyar.list.item-success texto="{{ __('Source Code CSS') }}" />
+                            <x-theme.anyar.list.item-success texto="{{ __('Source Code HTML') }}" />
+                            <x-theme.anyar.list.item-success texto="{{ __('Full Laravel Template Code') }}" />
+                        </ul>
+                        <div class="btn-wrap">
+                            <a class="btn-buy" href="#">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+@endsection

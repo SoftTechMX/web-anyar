@@ -45,4 +45,9 @@ class HomeController extends Controller
     {
         return view('page.blog-single');
     }
+
+    public function buy()
+    {
+        return view('page.buy');
+    }
 }
