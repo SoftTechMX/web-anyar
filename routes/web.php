@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PreguntaFrecuenteController;
 
 Auth::routes();
 
@@ -15,3 +16,6 @@ Route::get('/home',     [HomeController::class, 'landing'])->name('home');
 Route::get('/details',      [HomeController::class, 'details']);
 Route::get('/blog',         [HomeController::class, 'blog']);
 Route::get('/blog-single',  [HomeController::class, 'blog_single']);
+
+
+Route::resource('pregunta-frecuente', PreguntaFrecuenteController::class);

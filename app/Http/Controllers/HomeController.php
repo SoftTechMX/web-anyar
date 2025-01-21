@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\PreguntaFrecuente;
+
 class HomeController extends Controller
 {
     /**
@@ -23,7 +25,10 @@ class HomeController extends Controller
      */
     public function landing()
     {
-        return view('page.landing');
+        $preguntas_frecuentes = PreguntaFrecuente::take(5)->get();
+
+        return view('page.landing')
+            ->with('preguntas_frecuentes', $preguntas_frecuentes);
     }
 
     public function details()

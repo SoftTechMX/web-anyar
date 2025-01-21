@@ -768,114 +768,54 @@
 	</section>
 	<!-- End Pricing Section -->
 
-	<!-- ======= Frequently Asked Questions Section ======= -->
 	<section class="faq section-bg" id="faq">
 		<div class="container" data-aos="fade-up">
 			<div class="section-title">
-				<h2>Frequently Asked Questions</h2>
+				<h2>
+					{{ __('Frequently Asked Questions') }}
+				</h2>
 			</div>
 
 			<div class="faq-list">
 				<ul>
-					<li data-aos-delay="100" data-aos="fade-up" data-aos="fade-up">
-						<i class="bx bx-help-circle icon-help"></i>
-						<a class="collapse" data-bs-target="#faq-list-1" data-bs-toggle="collapse">Non consectetur a
-							erat nam at lectus urna
-							duis?
-							<i class="bx bx-chevron-down icon-show"></i><i
-								class="bx bx-chevron-up icon-close"></i></a>
-						<div class="collapse show" data-bs-parent=".faq-list" id="faq-list-1">
-							<p>
-								Feugiat pretium nibh ipsum consequat.
-								Tempus iaculis urna id volutpat lacus
-								laoreet non curabitur gravida. Venenatis
-								lectus magna fringilla urna porttitor
-								rhoncus dolor purus non.
-							</p>
-						</div>
-					</li>
+					@isset($preguntas_frecuentes)
 
-					<li data-aos-delay="200" data-aos="fade-up">
-						<i class="bx bx-help-circle icon-help"></i>
-						<a class="collapsed" data-bs-target="#faq-list-2" data-bs-toggle="collapse">Feugiat
-							scelerisque varius morbi enim nunc?
-							<i class="bx bx-chevron-down icon-show"></i><i
-								class="bx bx-chevron-up icon-close"></i></a>
-						<div class="collapse" data-bs-parent=".faq-list" id="faq-list-2">
-							<p>
-								Dolor sit amet consectetur adipiscing
-								elit pellentesque habitant morbi. Id
-								interdum velit laoreet id donec
-								ultrices. Fringilla phasellus faucibus
-								scelerisque eleifend donec pretium. Est
-								pellentesque elit ullamcorper dignissim.
-								Mauris ultrices eros in cursus turpis
-								massa tincidunt dui.
-							</p>
-						</div>
-					</li>
+						@php
+							$retraso_en_milisegundos = 100;
+						@endphp
 
-					<li data-aos-delay="300" data-aos="fade-up">
-						<i class="bx bx-help-circle icon-help"></i>
-						<a class="collapsed" data-bs-target="#faq-list-3" data-bs-toggle="collapse">Dolor sit amet
-							consectetur adipiscing elit?
-							<i class="bx bx-chevron-down icon-show"></i><i
-								class="bx bx-chevron-up icon-close"></i></a>
-						<div class="collapse" data-bs-parent=".faq-list" id="faq-list-3">
-							<p>
-								Eleifend mi in nulla posuere
-								sollicitudin aliquam ultrices sagittis
-								orci. Faucibus pulvinar elementum
-								integer enim. Sem nulla pharetra diam
-								sit amet nisl suscipit. Rutrum tellus
-								pellentesque eu tincidunt. Lectus urna
-								duis convallis convallis tellus. Urna
-								molestie at elementum eu facilisis sed
-								odio morbi quis
-							</p>
-						</div>
-					</li>
+						@forelse ($preguntas_frecuentes as $faq)
 
-					<li data-aos-delay="400" data-aos="fade-up">
-						<i class="bx bx-help-circle icon-help"></i>
-						<a class="collapsed" data-bs-target="#faq-list-4" data-bs-toggle="collapse">Tempus quam
-							pellentesque nec nam aliquam
-							sem et tortor consequat?
-							<i class="bx bx-chevron-down icon-show"></i><i
-								class="bx bx-chevron-up icon-close"></i></a>
-						<div class="collapse" data-bs-parent=".faq-list" id="faq-list-4">
-							<p>
-								Molestie a iaculis at erat pellentesque
-								adipiscing commodo. Dignissim
-								suspendisse in est ante in. Nunc vel
-								risus commodo viverra maecenas accumsan.
-								Sit amet nisl suscipit adipiscing
-								bibendum est. Purus gravida quis blandit
-								turpis cursus in.
-							</p>
-						</div>
-					</li>
+							<li data-aos-delay="{{ $retraso_en_milisegundos }}" data-aos="fade-up" data-aos="fade-up">
+								<i class="bx bx-help-circle icon-help"></i>
+								<a class="collapse" data-bs-target="#faq-list-{{ $loop->iteration }}" data-bs-toggle="collapse">
+									{{ $faq->pregunta  }}
+									<i class="bx bx-chevron-down icon-show"></i>
+									<i class="bx bx-chevron-up icon-close"></i>
+								</a>
+								<div class="collapse" data-bs-parent=".faq-list" id="faq-list-{{ $loop->iteration }}">
+									<p>
+										{{ $faq->respuesta }}
+									</p>
+								</div>
+							</li>
 
-					<li data-aos-delay="500" data-aos="fade-up">
-						<i class="bx bx-help-circle icon-help"></i>
-						<a class="collapsed" data-bs-target="#faq-list-5" data-bs-toggle="collapse">Tortor vitae
-							purus faucibus ornare. Varius
-							vel pharetra vel turpis nunc eget lorem
-							dolor?
-							<i class="bx bx-chevron-down icon-show"></i><i
-								class="bx bx-chevron-up icon-close"></i></a>
-						<div class="collapse" data-bs-parent=".faq-list" id="faq-list-5">
-							<p>
-								Laoreet sit amet cursus sit amet dictum
-								sit amet justo. Mauris vitae ultricies
-								leo integer malesuada nunc vel.
-								Tincidunt eget nullam non nisi est sit
-								amet. Turpis nunc eget lorem dolor sed.
-								Ut venenatis tellus in metus vulputate
-								eu scelerisque.
-							</p>
-						</div>
-					</li>
+							@php
+								$retraso_en_milisegundos += 100;
+							@endphp
+						@empty
+							<div class="text-center">
+								<p class="text-center fw-bold mb-3">
+									{{ __('There are no questions asked by users yet, if you have a question, click the following button.') }}
+								</p>
+	
+								<a href="{{ route('pregunta-frecuente.create') }}" class="btn btn-primary d-inline p-2">
+									{{ __('Add a question here!') }}
+								</a>
+							</div>
+						@endforelse
+
+					@endisset
 				</ul>
 			</div>
 		</div>
