@@ -649,87 +649,17 @@
 	<section class="pricing" id="pricing">
 		<div class="container" data-aos="fade-up">
 			<div class="section-title">
-				<h2>Pricing</h2>
+				<h2>
+					{{ __('Pricing') }}
+				</h2>
 				<p>
-					Magnam dolores commodi suscipit. Necessitatibus eius
-					consequatur ex aliquid fuga eum quidem. Sit sint
-					consectetur velit. Quisquam quos quisquam
-					cupiditate. Et nemo qui impedit suscipit alias ea.
-					Quia fugiat sit in iste officiis commodi quidem hic
-					quas.
+					{{ __("You're currently exploring a powerful Content Management System (CMS) designed to simplify website creation and management. This CMS is available for purchase, offering you complete control over your personal or professional online presence.") }}
+				
+					{{ __("Take ownership of this versatile CMS and build the website you've always wanted. With just a few clicks, you can unlock the full potential of this platform for your personal or business use.") }}
 				</p>
 			</div>
 
-			<div class="row">
-				<div class="col-lg-3 col-md-6" data-aos-delay="100" data-aos="fade-up">
-					<div class="box">
-						<h3>Free</h3>
-						<h4><sup>$</sup>0<span> / month</span></h4>
-						<ul>
-							<li>Aida dere</li>
-							<li>Nec feugiat nisl</li>
-							<li>Nulla at volutpat dola</li>
-							<li class="na">Pharetra massa</li>
-							<li class="na">Massa ultricies mi</li>
-						</ul>
-						<div class="btn-wrap">
-							<a class="btn-buy" href="#">Buy Now</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-3 col-md-6 mt-4 mt-md-0" data-aos-delay="200" data-aos="fade-up">
-					<div class="box featured">
-						<h3>Business</h3>
-						<h4><sup>$</sup>19<span> / month</span></h4>
-						<ul>
-							<li>Aida dere</li>
-							<li>Nec feugiat nisl</li>
-							<li>Nulla at volutpat dola</li>
-							<li>Pharetra massa</li>
-							<li class="na">Massa ultricies mi</li>
-						</ul>
-						<div class="btn-wrap">
-							<a class="btn-buy" href="#">Buy Now</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos-delay="300" data-aos="fade-up">
-					<div class="box">
-						<h3>Developer</h3>
-						<h4><sup>$</sup>29<span> / month</span></h4>
-						<ul>
-							<li>Aida dere</li>
-							<li>Nec feugiat nisl</li>
-							<li>Nulla at volutpat dola</li>
-							<li>Pharetra massa</li>
-							<li>Massa ultricies mi</li>
-						</ul>
-						<div class="btn-wrap">
-							<a class="btn-buy" href="#">Buy Now</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos-delay="400" data-aos="fade-up">
-					<div class="box">
-						<span class="advanced">Advanced</span>
-						<h3>Ultimate</h3>
-						<h4><sup>$</sup>49<span> / month</span></h4>
-						<ul>
-							<li>Aida dere</li>
-							<li>Nec feugiat nisl</li>
-							<li>Nulla at volutpat dola</li>
-							<li>Pharetra massa</li>
-							<li>Massa ultricies mi</li>
-						</ul>
-						<div class="btn-wrap">
-							<a class="btn-buy" href="#">Buy Now</a>
-						</div>
-					</div>
-				</div>
-			</div>
+			<x-theme.anyar.price-cards />
 		</div>
 	</section>
 
