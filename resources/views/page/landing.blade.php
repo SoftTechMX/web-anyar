@@ -288,34 +288,25 @@
 			</div>
 		</div>
 	</section>
-	<!-- End Why Us Section -->
 
-	<!-- ======= Services Section ======= -->
 	<section class="services" id="services">
 		<div class="container" data-aos="fade-up">
 			<div class="section-title">
-				<h2>Services</h2>
+				<h2>
+					{{ __('Services') }}
+				</h2>
 				<p>
-					Magnam dolores commodi suscipit. Necessitatibus eius
-					consequatur ex aliquid fuga eum quidem. Sit sint
-					consectetur velit. Quisquam quos quisquam
-					cupiditate. Et nemo qui impedit suscipit alias ea.
-					Quia fugiat sit in iste officiis commodi quidem hic
-					quas.
+					{{ __("With our CMS system, you have complete control to add, edit, and delete services according to your needs. Using a user-friendly cPanel interface, you can manage your services effortlessly without requiring technical expertise. The intuitive design ensures a seamless experience, allowing you to customize service details, descriptions, and images in just a few clicks. Whether you're updating existing services or introducing new ones, the system is designed to adapt to your preferences, providing flexibility and efficiency for your business operations.") }}
 				</p>
 			</div>
 
 			<div class="row">
 				<div class="col-md-6 d-flex align-items-stretch" data-aos-delay="100" data-aos="fade-up">
-					<div class="icon-box">
-						<i class="bi bi-card-checklist"></i>
-						<h4><a href="#">Lorem Ipsum</a></h4>
-						<p>
-							Voluptatum deleniti atque corrupti quos
-							dolores et quas molestias excepturi sint
-							occaecati cupiditate non provident
-						</p>
-					</div>
+					<x-theme.anyar.service-card 
+						titulo="{{ __('Software Development') }}"
+						icono="bx bx-code-alt"
+						descripcion=""
+					/>
 				</div>
 				<div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos-delay="200" data-aos="fade-up">
 					<div class="icon-box">
@@ -705,7 +696,7 @@
 								</p>
 	
 								<a href="{{ route('pregunta-frecuente.create') }}" class="btn btn-primary d-inline p-2">
-									{{ __('Add a question here!') }}
+									{{ __('Add your question here!') }}
 								</a>
 							</div>
 						@endforelse
