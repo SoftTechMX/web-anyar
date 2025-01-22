@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
-use App\Models\PreguntaFrecuente;
+use App\Models\FrequentlyAskedQuestion;
 
 class HomeController extends Controller
 {
@@ -25,10 +26,12 @@ class HomeController extends Controller
      */
     public function landing()
     {
-        $preguntas_frecuentes = PreguntaFrecuente::take(5)->get();
+        $faqs = Cache::remember('frequently_asked_questions', now()->addMinutes(30), function () {
+            return FrequentlyAskedQuestion::take(5)->get();
+        });
 
         return view('page.landing')
-            ->with('preguntas_frecuentes', $preguntas_frecuentes);
+            ->with('faqs', $faqs);
     }
 
     public function details()

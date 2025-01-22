@@ -7,16 +7,16 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 
-use App\Models\PreguntaFrecuente;
+use App\Models\FrequentlyAskedQuestion;
 
-class PreguntasFrecuentesSeeder extends Seeder
+class FrequentlyAskedQuestionsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        DB::table('preguntas_frecuentes')->truncate();
-        PreguntaFrecuente::factory()->count(20)->create();
+        DB::table('frequently_asked_questions')->truncate();
+        FrequentlyAskedQuestion::factory()->count(20)->create();
     }
 }

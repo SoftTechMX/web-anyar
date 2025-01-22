@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\AppModelsPreguntaFrecuente>
  */
-class PreguntaFrecuenteFactory extends Factory
+class FrequentlyAskedQuestionFactory extends Factory
 {
 
-    protected $model = \App\Models\PreguntaFrecuente::class;
+    protected $model = \App\Models\FrequentlyAskedQuestion::class;
 
     /**
      * Define the model's default state.
@@ -20,8 +20,8 @@ class PreguntaFrecuenteFactory extends Factory
     public function definition(): array
     {
          return [
-            'pregunta'      => $this->faker->sentence(10), // Genera una pregunta aleatoria
-            'respuesta'     => $this->faker->paragraph(3), // Genera una respuesta aleatoria
+            'question'      => $this->faker->sentence(10), // Genera una pregunta aleatoria
+            'answer'        => $this->faker->paragraph(3), // Genera una respuesta aleatoria
             'created_at'    => now(),
             'updated_at'    => now(),
         ];

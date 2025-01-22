@@ -664,24 +664,24 @@
 
 			<div class="faq-list">
 				<ul>
-					@isset($preguntas_frecuentes)
+					@isset($faqs)
 
 						@php
 							$retraso_en_milisegundos = 100;
 						@endphp
 
-						@forelse ($preguntas_frecuentes as $faq)
+						@forelse ($faqs as $faq)
 
 							<li data-aos-delay="{{ $retraso_en_milisegundos }}" data-aos="fade-up" data-aos="fade-up">
 								<i class="bx bx-help-circle icon-help"></i>
 								<a class="collapse" data-bs-target="#faq-list-{{ $loop->iteration }}" data-bs-toggle="collapse">
-									{{ $faq->pregunta  }}
+									{{ $faq->question  }}
 									<i class="bx bx-chevron-down icon-show"></i>
 									<i class="bx bx-chevron-up icon-close"></i>
 								</a>
 								<div class="collapse" data-bs-parent=".faq-list" id="faq-list-{{ $loop->iteration }}">
 									<p>
-										{{ $faq->respuesta }}
+										{{ $faq->answer }}
 									</p>
 								</div>
 							</li>

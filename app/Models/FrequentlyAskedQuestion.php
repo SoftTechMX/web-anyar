@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class PreguntaFrecuente extends Model
+class FrequentlyAskedQuestion extends Model
 {
     use HasFactory;
 
-    protected $table = "preguntas_frecuentes";
+    protected $table = "frequently_asked_questions";
 
     public $timestamps = true;
 }

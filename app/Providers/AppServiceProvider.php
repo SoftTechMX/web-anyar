@@ -22,10 +22,9 @@ class AppServiceProvider extends ServiceProvider
      * Bootstrap any application services.
      */
     public function boot(): void
-    {
-
+    {   
         $ui_menu = UiNavbarMenu::all();
-
+    
         View::share('ui_menus', $ui_menu);
     }
 }
