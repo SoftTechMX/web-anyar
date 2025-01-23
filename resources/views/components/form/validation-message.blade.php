@@ -1,3 +1,13 @@
 <div>
-    <!-- Live as if you were to die tomorrow. Learn as if you were to live forever. - Mahatma Gandhi -->
+    @error($field)
+        <span class="text-danger fw-bold">
+            {{ $message }}
+        </span>
+    @else
+        @if($value)
+            <span class="text-success fw-bold">
+                {{ __('Great!') }}
+            </span>
+        @endif
+    @enderror
 </div>
