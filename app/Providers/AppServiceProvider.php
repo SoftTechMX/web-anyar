@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\View;
 
 use App\Models\UiNavbarMenu;
+use App\Models\Service;
+use Exception;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,8 +25,17 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {   
-        $ui_menu = UiNavbarMenu::all();
+        try
+        {
+            $ui_menu = UiNavbarMenu::all();
+            $services = Service::all();
     
-        View::share('ui_menus', $ui_menu);
+            View::share('ui_menus', $ui_menu);
+            View::share('services', $services);
+        }
+        catch(Exception $e)
+        {
+            
+        }
     }
 }

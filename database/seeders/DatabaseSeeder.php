@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             FrequentlyAskedQuestionsSeeder::class,
             UiNavbarMenuSeeder::class,
+            ServiceSeeder::class,
         ]);
     }
 }
