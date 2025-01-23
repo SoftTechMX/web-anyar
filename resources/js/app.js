@@ -253,3 +253,33 @@ window.timeGridPlugin    = timeGridPlugin;
 window.listPlugin        = listPlugin;
 window.esLocale          = esLocale;
 window.interactionPlugin = interactionPlugin;
+
+// Livewire
+// =================================================================================== //
+//                       _     _                    _                                  //
+//                      | |   (_)_   _______      _(_)_ __ ___                         //
+//                      | |   | \ \ / / _ \ \ /\ / / | '__/ _ \                        //
+//                      | |___| |\ V /  __/\ V  V /| | | |  __/                        //
+//                      |_____|_| \_/ \___| \_/\_/ |_|_|  \___|                        //
+//                                                                                     //
+// =================================================================================== //
+
+/**
+ * Estos listener son para cuando el backend emite alertas, cuando detectan la alerta se
+ * muestran mediante toastr
+ */
+window.addEventListener('alert-warning', event => {
+    toastr.warning(event.detail, 'Warning!');
+});
+
+window.addEventListener('alert-error', event => {
+    toastr.error(event.detail, 'Error!');
+});
+
+window.addEventListener('alert-danger', event => {
+    toastr.error(event.detail, 'Caution!');
+});
+
+window.addEventListener('alert-success', event => {
+    toastr.success(event.detail, 'Correct!');
+});
