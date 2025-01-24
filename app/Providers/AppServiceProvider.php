@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\View;
+use Illuminate\Pagination\Paginator;
 
 use App\Models\UiNavbarMenu;
 use App\Models\Service;
@@ -24,7 +25,9 @@ class AppServiceProvider extends ServiceProvider
      * Bootstrap any application services.
      */
     public function boot(): void
-    {   
+    {
+        Paginator::useBootstrapFive();
+        
         try
         {
             $ui_menu = UiNavbarMenu::all();

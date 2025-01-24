@@ -2,17 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\PreguntaFrecuente;
 use Illuminate\Http\Request;
 
-class PreguntaFrecuenteController extends Controller
+use App\Models\Post;
+
+class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $posts = Post::paginate(5);
+        return view('page.post.index')
+            ->with('posts', $posts);
     }
 
     /**
@@ -34,7 +37,7 @@ class PreguntaFrecuenteController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(PreguntaFrecuente $preguntaFrecuente)
+    public function show(Post $post)
     {
         //
     }
@@ -42,7 +45,7 @@ class PreguntaFrecuenteController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(PreguntaFrecuente $preguntaFrecuente)
+    public function edit(Post $post)
     {
         //
     }
@@ -50,7 +53,7 @@ class PreguntaFrecuenteController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, PreguntaFrecuente $preguntaFrecuente)
+    public function update(Request $request, Post $post)
     {
         //
     }
@@ -58,7 +61,7 @@ class PreguntaFrecuenteController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(PreguntaFrecuente $preguntaFrecuente)
+    public function destroy(Post $post)
     {
         //
     }

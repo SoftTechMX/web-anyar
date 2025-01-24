@@ -16,6 +16,8 @@ class DatabaseSeeder extends Seeder
             ServiceSeeder::class,
             CalendarSeeder::class,
             EventSeeder::class,
+            UsersSeeder::class,
+            PostSeeder::class,
         ]);
     }
 }
