@@ -14,6 +14,8 @@ class DatabaseSeeder extends Seeder
             FrequentlyAskedQuestionsSeeder::class,
             UiNavbarMenuSeeder::class,
             ServiceSeeder::class,
+            CalendarSeeder::class,
+            EventSeeder::class,
         ]);
     }
 }

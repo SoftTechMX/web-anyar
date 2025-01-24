@@ -13,6 +13,7 @@ class UiNavbarMenuSeeder extends Seeder
         DB::table('ui_navbar_menus')->truncate();
         
         DB::table('ui_navbar_menus')->insert([
+            // MENU 1
             [
                 'label' => 'Home',
                 'route' => 'landing',
@@ -22,6 +23,17 @@ class UiNavbarMenuSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
+            // MENU 2
+            [
+                'label' => 'Calendar',
+                'route' => 'calendar.index',
+                'icon' => '',
+                'parent_menu' => null,
+                'created_by' => null,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            // MENU 3
             [
                 'label' => 'Users',
                 'route' => null,
@@ -31,24 +43,26 @@ class UiNavbarMenuSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
-            [
-                'label' => 'Login',
-                'route' => 'login',
-                'icon' => '',
-                'parent_menu' => 2,
-                'created_by' => null,
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ],
-            [
-                'label' => 'Register',
-                'route' => 'register',
-                'icon' => '',
-                'parent_menu' => 2,
-                'created_by' => null,
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ],
+                // MENU 3.1
+                [
+                    'label' => 'Login',
+                    'route' => 'login',
+                    'icon' => '',
+                    'parent_menu' => 3,
+                    'created_by' => null,
+                    'created_at' => Carbon::now(),
+                    'updated_at' => Carbon::now(),
+                ],
+                // MENU 3.2
+                [
+                    'label' => 'Register',
+                    'route' => 'register',
+                    'icon' => '',
+                    'parent_menu' => 3,
+                    'created_by' => null,
+                    'created_at' => Carbon::now(),
+                    'updated_at' => Carbon::now(),
+                ],
         ]);
     }
 }
