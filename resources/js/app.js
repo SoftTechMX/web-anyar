@@ -178,6 +178,21 @@ document.addEventListener('DOMContentLoaded', () => {
     new PureCounter();
 });
 
+// VanillaTilt
+// =================================================================================== //
+//                   __     __          _ _ _      _____ _ _ _                         //
+//                   \ \   / /_ _ _ __ (_) | | __ |_   _(_) | |_                       //
+//                    \ \ / / _` | '_ \| | | |/ _` || | | | | __|                      //
+//                     \ V / (_| | | | | | | | (_| || | | | | |_                       //
+//                      \_/ \__,_|_| |_|_|_|_|\__,_||_| |_|_|\__|                      //
+//                                                                                     //
+//                              npm i vanilla-tilt                                     //
+//                                                                                     //
+// =================================================================================== //
+import VanillaTilt from 'vanilla-tilt';
+window.VanillaTilt = VanillaTilt;
+
+
 // Swiper JS
 // =================================================================================== //
 //                   ____          _                    _ ____                         //
@@ -263,6 +278,21 @@ window.interactionPlugin = interactionPlugin;
 //                      |_____|_| \_/ \___| \_/\_/ |_|_|  \___|                        //
 //                                                                                     //
 // =================================================================================== //
+
+/**
+ * Cierra Todos los Modales de Bootstrap que estan abiertos, Normalmente el backend emite
+ * este evento cuando almacena los  datos de manera correcta en las vistas que usan algun 
+ * formulario incrustado en un modal.
+ */
+window.addEventListener('close-modal', function () {
+    let modales = document.querySelectorAll('.modal');
+
+    modales.forEach(element => {
+        let modal = bootstrap.Modal.getInstance(element);
+        if (modal)
+            modal.hide();
+    });
+});
 
 /**
  * Estos listener son para cuando el backend emite alertas, cuando detectan la alerta se
