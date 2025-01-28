@@ -218,22 +218,26 @@ const swiper = new Swiper('.swiper', {
     loop: true,
     speed: 600,
     autoplay: {
-        "delay": 5000
+        delay: 5000
     },
     slidesPerView: "auto",
     pagination: {
-        "el": ".swiper-pagination",
-        "type": "bullets",
-        "clickable": true
+        el: ".swiper-pagination",
+        type: "bullets",
+        clickable: true
+    },
+    navigation: {
+        nextEl: '.swiper-button-next', // Selector para el botón "siguiente"
+        prevEl: '.swiper-button-prev'  // Selector para el botón "anterior"
     },
     breakpoints: {
-        "320": {
-            "slidesPerView": 1,
-            "spaceBetween": 40
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 40
         },
-        "1200": {
-            "slidesPerView": 3,
-            "spaceBetween": 10
+        1200: {
+            slidesPerView: 3,
+            spaceBetween: 10
         }
     }
 });
