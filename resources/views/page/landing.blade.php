@@ -111,50 +111,26 @@
 					{{ __('About Us') }}
 				</h2>
 				<p>
-					Magnam dolores commodi suscipit. Necessitatibus eius
-					consequatur ex aliquid fuga eum quidem. Sit sint
-					consectetur velit. Quisquam quos quisquam
-					cupiditate. Et nemo qui impedit suscipit alias ea.
-					Quia fugiat sit in iste officiis commodi quidem hic
-					quas.
+					{{ __('We are a company passionate about technology and innovation, dedicated to offering comprehensive solutions in software development, creation of web and mobile applications, penetration testing, and services related to IT and systems engineering.') }}
 				</p>
 			</div>
 
 			<div class="row content">
 				<div class="col-lg-6">
+					<h5 class="text-primary fw-bold">
+						{{ __('Our Mission') }}
+					</h5>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur
-						adipiscing elit, sed do eiusmod tempor
-						incididunt ut labore et dolore magna aliqua.
+						{{ __('Our mission is to be a strategic ally in the digital transformation of companies and organizations. We are dedicated to developing customized technological solutions that boost the productivity, efficiency and competitiveness of our clients in a constantly evolving digital world. By using innovative technologies, agile development practices and a focus on customer needs, we seek to deliver high-quality projects that generate tangible value for their businesses.') }}
 					</p>
-					<ul>
-						<li>
-							<i class="ri-check-double-line"></i> Ullamco
-							laboris nisi ut aliquip ex ea commodo
-							consequat
-						</li>
-						<li>
-							<i class="ri-check-double-line"></i> Duis
-							aute irure dolor in reprehenderit in
-							voluptate velit
-						</li>
-						<li>
-							<i class="ri-check-double-line"></i> Ullamco
-							laboris nisi ut aliquip ex ea commodo
-							consequat
-						</li>
-					</ul>
 				</div>
 				<div class="col-lg-6 pt-4 pt-lg-0">
+					<h5 class="text-primary fw-bold">
+						{{ __('Our Vision') }}
+					</h5>
 					<p>
-						Ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in
-						reprehenderit in voluptate velit esse cillum
-						dolore eu fugiat nulla pariatur. Excepteur sint
-						occaecat cupidatat non proident, sunt in culpa
-						qui officia deserunt mollit anim id est laborum.
+						{{ __('Our vision is to establish ourselves as a leading reference in technological innovation, software development and cybersecurity at a national and international level. We aspire to be recognized for our ability to anticipate market needs, offering disruptive technological solutions that drive the business success of our clients.') }}
 					</p>
-					<a class="btn-learn-more" href="#">Learn More</a>
 				</div>
 			</div>
 		</div>
