@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 
 use App\Models\FrequentlyAskedQuestion;
+use App\Models\Person;
 
 class HomeController extends Controller
 {
@@ -26,11 +27,14 @@ class HomeController extends Controller
      */
     public function landing()
     {
+        $team = Person::take(4)->get();
+
         $faqs = Cache::remember('frequently_asked_questions', now()->addMinutes(30), function () {
             return FrequentlyAskedQuestion::take(5)->get();
         });
 
         return view('page.landing')
+            ->with('team', $team    )
             ->with('faqs', $faqs);
     }
 
@@ -47,6 +51,11 @@ class HomeController extends Controller
     public function blog_single()
     {
         return view('page.blog-single');
+    }
+
+    public function plans()
+    {
+        return view('page.plans');
     }
 
     public function buy()

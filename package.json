@@ -28,6 +28,7 @@
         "sweetalert2": "^11.15.10",
         "swiper": "^11.2.1",
         "toastr": "^2.1.4",
-        "vanilla-tilt": "^1.8.1"
+        "vanilla-tilt": "^1.8.1",
+        "venobox": "^2.1.8"
     }
 }

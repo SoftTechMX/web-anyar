@@ -1,24 +1,4 @@
-<div class="row">
-    <div class="col-lg-3 col-md-6" data-aos-delay="100" data-aos="fade-up">
-        <div class="box featured">
-            <h3>{{ __('Free') }}</h3>
-            <h4>
-                <sup>$</sup>0.<sup>00</sup>
-            </h4>
-            <ul>
-                <x-theme.anyar.list.item-danger  texto="{{ __('cPanel') }}" />
-                <x-theme.anyar.list.item-danger  texto="{{ __('WEB Hosting') }}" />
-                <x-theme.anyar.list.item-danger  texto="{{ __('Domain Name') }}" />
-                <x-theme.anyar.list.item-danger  texto="{{ __('Documentation') }}" />
-                <x-theme.anyar.list.item-danger  texto="{{ __('Technical Support') }}" />
-                <x-theme.anyar.list.item-danger  texto="{{ __('Backend Source Code') }}" />
-                <x-theme.anyar.list.item-success texto="{{ __('FrontEnd Source Code') }}" />
-            </ul>
-            <div class="btn-wrap">
-                <a class="btn-buy" href="#">Buy Now</a>
-            </div>
-        </div>
-    </div>
+<div class="row d-flex justify-content-center">
 
     <div class="col-lg-3 col-md-6 mt-4 mt-md-0" data-aos-delay="200" data-aos="fade-up">
         <div class="box featured">
@@ -36,7 +16,9 @@
                 <x-theme.anyar.list.item-danger  texto="{{ __('FrontEnd Source Code') }}" />
             </ul>
             <div class="btn-wrap">
-                <a class="btn-buy" href="#">Buy Now</a>
+                <a class="btn-buy" href="{{ route('buy') }}">
+                    {{ __('Buy Now') }}
+                </a>
             </div>
         </div>
     </div>

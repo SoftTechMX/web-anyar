@@ -61,9 +61,13 @@
 								</div>
 							</div>
 
-							<div class="row mb-0">
-								<div class="col-md-6 offset-md-4">
-									<button class="btn btn-primary" type="submit">
+							<div class="row">
+								<div class="col-md-6 offset-md-4 d-flex flex-wrap justify-content-center">
+									<a href="{{ route('home') }}" class="btn btn-secondary m-1 col-12 col-lg-5">
+										<i class='bx bxs-left-arrow'></i>
+										{{ __('Return') }}
+									</a>
+									<button class="btn btn-primary m-1 col-12 col-lg-5" type="submit">
 										{{ __('Register') }}
 									</button>
 								</div>

@@ -5,8 +5,8 @@
 			<i class="bi bi-phone-fill phone-icon"></i> +1 5589 55488 55
 		</div>
 		<div class="cta d-none d-md-block">
-			<a class="" href="{{ route('buy-template') }}">
-				{{ __('Buy This Template!') }}
+			<a class="" href="{{ route('plans') }}">
+				{{ __('Buy This Website!') }}
 			</a>
 		</div>
 	</div>

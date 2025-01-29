@@ -20,6 +20,7 @@
 				'resources/sass/app.scss',
 				'resources/js/theme/anyar.js',
 				'resources/sass/theme/anyar.scss',
+				'resources/sass/components/buttons.scss',
 			])
 		@endif
 
