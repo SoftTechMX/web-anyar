@@ -46,7 +46,7 @@
 			<x-theme.jane-lepannen.card.image-card
 				title="{{ __('App Settings') }}"
 				description="{{ __('In this module you can edit the information of the application in general, from social networks, name of the app, to telephone numbers and addresses.') }}"
-				url=""
+				url="{{ route('app-settings.index') }}"
 				image="https://www.deployr.ai/wp-content/uploads/2023/12/wsl-03-wsl-install.jpg"
 			/>
 			<x-theme.jane-lepannen.card.image-card

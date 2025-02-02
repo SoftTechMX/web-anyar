@@ -13,6 +13,23 @@ return new class extends Migration
     {
         Schema::create('ui_app_settings', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->nullable(true);
+            $table->string('about_us')->nullable(true);
+            $table->string('mision')->nullable(true);
+            $table->string('vision')->nullable(true);
+            $table->string('descripcion')->nullable(true);
+            $table->string('email')->nullable(true);
+            $table->string('phone')->nullable(true);
+            $table->string('country')->nullable(true);
+            $table->string('address_street')->nullable(true);
+            $table->string('address_cp')->nullable(true);
+            $table->string('address_number')->nullable(true);
+            $table->string('facebook')->nullable(true);
+            $table->string('twitter')->nullable(true);
+            $table->string('instagram')->nullable(true);
+            $table->string('skype')->nullable(true);
+            $table->string('linkedin')->nullable(true);
+            $table->string('youtube')->nullable(true);
             $table->timestamps();
         });
     }

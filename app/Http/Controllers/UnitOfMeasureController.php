@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\UiNavbarMenu;
+use App\Models\UnitOfMeasure;
 use Illuminate\Http\Request;
 
-class UiNavbarMenuController extends Controller
+class UnitOfMeasureController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class UiNavbarMenuController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(UiNavbarMenu $uiNavbarMenu)
+    public function show(UnitOfMeasure $unitOfMeasure)
     {
         //
     }
@@ -42,7 +42,7 @@ class UiNavbarMenuController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(UiNavbarMenu $uiNavbarMenu)
+    public function edit(UnitOfMeasure $unitOfMeasure)
     {
         //
     }
@@ -50,7 +50,7 @@ class UiNavbarMenuController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, UiNavbarMenu $uiNavbarMenu)
+    public function update(Request $request, UnitOfMeasure $unitOfMeasure)
     {
         //
     }
@@ -58,7 +58,7 @@ class UiNavbarMenuController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(UiNavbarMenu $uiNavbarMenu)
+    public function destroy(UnitOfMeasure $unitOfMeasure)
     {
         //
     }

@@ -13,6 +13,7 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\ContactRequestController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\ServicesController;
+use App\Http\Controllers\UiController;
 
 Auth::routes();
 
@@ -28,6 +29,9 @@ Route::get('/dashboard',    [HomeController::class, 'dashboard'])->name('dashboa
 Route::get('/my-profile',   [HomeController::class, 'user_profile'])->name('user.profile');
 Route::get('/settings',     [HomeController::class, 'user_settings'])->name('user.settings');
 Route::get('/cpanel',       [HomeController::class, 'cpanel'])->name('cpanel');
+
+Route::get('/app-settings', [UiController::class, 'index'])->name('app-settings.index');
+Route::post('/settings-save', [UiController::class, 'settings_save'])->name('app-settings.save');
 
 Route::resource('frequently-asked-questions', FrequentlyAskedQuestionController::class);
 Route::post('/frequently-asked-questions/search', [FrequentlyAskedQuestionController::class, 'search'])->name('frequently-asked-questions.search');

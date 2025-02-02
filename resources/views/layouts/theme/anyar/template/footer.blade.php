@@ -73,30 +73,43 @@
 				</div>
 
 				<div class="col-lg-3 col-md-6 footer-contact">
-					<h4>Contact Us</h4>
+					<h4>
+						{{ __('Contact Us') }}
+					</h4>
 					<p>
 						A108 Adam Street <br />
 						New York, NY 535022<br />
 						United States <br /><br />
-						<strong>Phone:</strong> +1 5589 55488 55<br />
-						<strong>Email:</strong> soft.tech.mexico@gmail.com<br />
+						<strong>{{ __('Phone') }}:</strong> {{ $app_settings->phone }} 
+						<br />
+						<strong>{{ __('Email')}}:</strong> {{ $app_settings->email }} 
+						<br />
 					</p>
 				</div>
 
 				<div class="col-lg-3 col-md-6 footer-info">
-					<h3>About Soft Tech MX</h3>
+					<h3>
+						{{ __('About ') }} {{ $app_settings->name }}
+					</h3>
 					<p>
-						Cras fermentum odio eu feugiat lide par naso
-						tierra. Justo eget nada terra videa magna derita
-						valies darta donna mare fermentum iaculis eu non
-						diam phasellus.
+						{{ $app_settings->about_us }}
 					</p>
 					<div class="social-links mt-3">
-						<a class="twitter" href="#"><i class="bx bxl-twitter"></i></a>
-						<a class="facebook" href="#"><i class="bx bxl-facebook"></i></a>
-						<a class="instagram" href="#"><i class="bx bxl-instagram"></i></a>
-						<a class="google-plus" href="#"><i class="bx bxl-skype"></i></a>
-						<a class="linkedin" href="#"><i class="bx bxl-linkedin"></i></a>
+						<a class="twitter" href="{{ $app_settings->twitter }}" target="__blank">
+							<i class="bx bxl-twitter"></i>
+						</a>
+						<a class="facebook" href="{{ $app_settings->facebook }}" target="__blank">
+							<i class="bx bxl-facebook"></i>
+						</a>
+						<a class="instagram" href="{{ $app_settings->instagram }}" target="__blank">
+							<i class="bx bxl-instagram"></i>
+						</a>
+						<a class="google-plus" href="{{ $app_settings->youtube }}" target="__blank">
+							<i class="bx bxl-youtube"></i>
+						</a>
+						<a class="linkedin" href="{{ $app_settings->linkedin }}" target="__blank">
+							<i class="bx bxl-linkedin"></i>
+						</a>
 					</div>
 				</div>
 			</div>

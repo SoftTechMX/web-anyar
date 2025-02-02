@@ -7,7 +7,7 @@
 		<meta content="{{ csrf_token() }}" name="csrf-token">
 
 		<title>
-			{{ config('app.name') }}
+			{{ $app_settings->name }}
 		</title>
 
 		@if (env('APP_ENV') === 'production')

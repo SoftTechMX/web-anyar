@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Product;
+
 class ProductsController extends Controller
 {
     /**
@@ -11,7 +13,10 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        //
+        $products = Product::paginate(5);
+
+        return view('page.product.index')
+            ->with('products',$products);
     }
 
     /**

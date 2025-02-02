@@ -1,8 +1,12 @@
 <div class="fixed-top d-flex align-items-center topbar-inner-pages" id="topbar">
 	<div class="container d-flex align-items-center justify-content-center justify-content-md-between">
 		<div class="contact-info d-flex align-items-center">
-			<i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">soft.tech.mexico@gmail.com</a>
-			<i class="bi bi-phone-fill phone-icon"></i> +1 5589 55488 55
+			<i class='bx bx-envelope'></i>
+			<a href="mailto:contact@example.com" class="">
+				{{ $app_settings->email }}
+			</a>
+			<i class='bx bx-phone-call phone-icon'></i>
+			{{ $app_settings->phone }}
 		</div>
 		<div class="cta d-none d-md-block">
 			<a class="" href="{{ route('plans') }}">
@@ -18,7 +22,7 @@
 		{{-- TEXTO --}}
 		<h1 class="logo">
 			<a href="{{ route('landing') }}">
-				{{ config('app.name') }}
+				{{ $app_settings->name }}
 			</a>
 		</h1>
 
@@ -113,7 +117,7 @@
 					</li>
 				@endauth
 			</ul>
-			<i class="bi bi-list mobile-nav-toggle"></i>
+			<i class='bx bx-menu mobile-nav-toggle'></i>
 		</nav>
 	</div>
 </header>
