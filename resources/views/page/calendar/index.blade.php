@@ -45,7 +45,8 @@
 				// Cuando se hace click en un evento del calendario
 				eventClick: function(info) {
 					let eventId = info.event.id;
-					window.open(`/evento/${eventId}`, '_blank');
+					// window.open(`/event/${eventId}`, '_blank');
+					location.href = `/event/${eventId}`;
 				},
 
 				// Cuando haces click en una fecha en especifico

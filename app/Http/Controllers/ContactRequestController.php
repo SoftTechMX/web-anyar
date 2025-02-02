@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ContactRequest;
 use Illuminate\Http\Request;
+
+use App\Models\ContactRequest;
 
 class ContactRequestController extends Controller
 {
@@ -12,7 +13,9 @@ class ContactRequestController extends Controller
      */
     public function index()
     {
-        //
+        $contact_requests = ContactRequest::paginate(5);
+        return view('page.contact-request.index')
+            ->with('contact_requests',$contact_requests);
     }
 
     /**

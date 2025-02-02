@@ -9,7 +9,16 @@ class Suscriptor extends Model
 {
     use HasFactory;
 
-    protected $table = "suscriptors";
+    protected $table = 'suscriptors';
+
+    protected $fillable = [
+        'email',
+        'active',
+    ];
+
+    protected $casts = [
+        'active' => 'boolean',
+    ];
 
     public $timestamps = true;
 }

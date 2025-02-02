@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Form;
 
+use Carbon\Carbon;
 use Livewire\Component;
 
 use App\Models\Suscriptor;
@@ -17,21 +18,22 @@ class Suscribe extends Component
     public function save()
     {
         $data = $this->validate();
-        $this->reset();
 
-        $suscriptor = Suscriptor::where('email', $this->email)->fisrt();
-
+        $suscriptor = Suscriptor::where('email', $this->email)->first();
+        
         if($suscriptor)
         {
             $suscriptor->active = true;
-            $suscriptor->save();
         }
         else
         {
-            Suscriptor::insert($data);
+            $suscriptor = new suscriptor($data);
         }
-        $this->dispatch("alert-success", "Your email has been registered in our alert newsletter.");
 
+        $suscriptor->save();
+        
+        $this->dispatch("alert-success", "Your email has been registered in our alert newsletter.");
+        $this->reset();
     }
 
     public function render()

@@ -12,7 +12,10 @@ class FrequentlyAskedQuestionController extends Controller
      */
     public function index()
     {
-        //
+        $faqs = FrequentlyAskedQuestion::paginate(5);
+
+        return view('page.frequently-asked-question.index')
+            ->with('faqs',$faqs);
     }
 
     /**

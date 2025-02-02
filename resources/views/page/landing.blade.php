@@ -316,9 +316,9 @@
 						<li class="filter-active" data-filter="*">
 							All
 						</li>
-						<li data-filter=".filter-app">App</li>
-						<li data-filter=".filter-card">Card</li>
-						<li data-filter=".filter-web">Web</li>
+						<li data-filter=".filter-app">Category 1</li>
+						<li data-filter=".filter-card">Category 2</li>
+						<li data-filter=".filter-web">Category 3</li>
 					</ul>
 				</div>
 			</div>

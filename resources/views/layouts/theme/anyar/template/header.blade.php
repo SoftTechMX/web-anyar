@@ -18,7 +18,7 @@
 		{{-- TEXTO --}}
 		<h1 class="logo">
 			<a href="{{ route('landing') }}">
-				Soft Tech MX
+				{{ config('app.name') }}
 			</a>
 		</h1>
 
@@ -31,6 +31,7 @@
 
 		<nav class="navbar" id="navbar">
 			<ul>
+				{{-- CARGAMOS LOS MENUS DE LA BASE DE DATOS --}}
 				@foreach ($ui_menus as $menu)
 
 					@if($menu->parent_menu == null)
@@ -38,6 +39,79 @@
 					@endif
 
 				@endforeach
+
+				@auth
+					{{-- MENU DE PERFIL DE USUARIO --}}
+					<li class="dropdown">
+						<a href="#">
+							<i class=""></i>
+							<span>
+								{{ __('Profile') }}
+							</span>
+						</a>
+						<ul>
+							@role('admin')
+							<li>
+								<a href="{{ route('cpanel') }}">
+									{{ __('cPanel') }}
+								</a>
+							</li>
+							
+							<li>
+								<a href="{{ route('user.settings') }}">
+									{{ __('Settings') }}
+								</a>
+							</li>
+							@endrole
+
+							<li>
+								<a href="{{ route('user.profile') }}">
+									{{ __('My Profile') }}
+								</a>
+							</li>							
+
+							@role('admin')
+							<li>
+								<a href="{{ route('dashboard') }}">
+									{{ __('Dashboard') }}
+								</a>
+							</li>
+							@endrole
+
+							<li>
+								<form method="POST" action="{{ route('logout') }}" id="form-logout">
+									@csrf
+								</form>
+
+								<a href="#" onclick="document.getElementById('form-logout').submit()">
+									{{ __('Logout') }}
+								</a>
+							</li>
+						</ul>
+					</li>
+				@else
+					{{-- MENU DE LOGIN --}}
+					<li class="dropdown">
+						<a href="#">
+							<i class="bx bx-chevrons-down"></i>
+							<span>
+								{{ __('Users') }}
+							</span>
+						</a>
+						<ul>
+							<li>
+								<a href="{{ route('login') }}">
+									{{ __('Login') }}
+								</a>
+							</li>
+							<li>
+								<a href="{{ route('register') }}">
+									{{ __('Register') }}
+								</a>
+							</li>
+						</ul>
+					</li>
+				@endauth
 			</ul>
 			<i class="bi bi-list mobile-nav-toggle"></i>
 		</nav>

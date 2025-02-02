@@ -11,13 +11,15 @@ class DatabaseSeeder extends Seeder
         $this->call([
             FrequentlyAskedQuestionsSeeder::class,
             UiNavbarMenuSeeder::class,
+            RolesSeeder::class,
+            UsersSeeder::class,
             ServiceSeeder::class,
             CalendarSeeder::class,
             EventSeeder::class,
-            UsersSeeder::class,
             PostSeeder::class,
             PersonSeeder::class,
             SocialNetworkSeeder::class,
+            CategorySeeder::class,
         ]);
     }
 }

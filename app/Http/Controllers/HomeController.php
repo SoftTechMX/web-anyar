@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 use App\Models\FrequentlyAskedQuestion;
 use App\Models\Person;
@@ -61,5 +63,60 @@ class HomeController extends Controller
     public function buy()
     {
         return view('page.buy');
+    }
+
+    public function user_profile()
+    {
+        if( !Auth::check() )
+        {
+            return Redirect::back();
+        }
+
+        $user = Auth::user();
+
+        return view('page.user.profile')
+            ->with('user', $user);
+    }
+
+    public function user_settings()
+    {
+        if( !Auth::check() )
+        {
+            return Redirect::back();
+        }
+
+        $user = Auth::user();
+
+        return view('page.user.settings')
+            ->with('user', $user);
+    }
+
+    public function dashboard()
+    {
+        if( !Auth::check() )
+        {
+            return Redirect::back();
+        }
+
+        $user = Auth::user();
+
+        return view('page.dashboard');
+    }
+
+    public function cpanel()
+    {
+        if( !Auth::check() )
+        {
+            return Redirect::back();
+        }
+
+        $user = Auth::user();
+
+        return view('page.cpanel');
+    }
+
+    public function version()
+    {
+        return view('page.version');
     }
 }

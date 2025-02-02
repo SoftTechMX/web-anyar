@@ -2,17 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Suscriptor;
 use Illuminate\Http\Request;
 
-class SuscriptorController extends Controller
+use App\Models\Service;
+
+class ServicesController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $services = Service::paginate(5);
+        return view('page.service.index')
+            ->with('services',$services);
     }
 
     /**
@@ -34,7 +37,7 @@ class SuscriptorController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Suscriptor $suscriptor)
+    public function show(string $id)
     {
         //
     }
@@ -42,7 +45,7 @@ class SuscriptorController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Suscriptor $suscriptor)
+    public function edit(string $id)
     {
         //
     }
@@ -50,7 +53,7 @@ class SuscriptorController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Suscriptor $suscriptor)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -58,7 +61,7 @@ class SuscriptorController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Suscriptor $suscriptor)
+    public function destroy(string $id)
     {
         //
     }
