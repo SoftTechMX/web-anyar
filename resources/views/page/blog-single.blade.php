@@ -170,7 +170,7 @@
 
 					</div><!-- End sidebar -->
 
-				</div><!-- End blog sidebar -->
+				</div>
 
 			</div>
 

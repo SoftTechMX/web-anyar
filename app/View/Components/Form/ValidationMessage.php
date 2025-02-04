@@ -8,12 +8,16 @@ use Illuminate\View\Component;
 
 class ValidationMessage extends Component
 {
+    public $field;
+    public $value;
+
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct($field, $value = null)
     {
-        //
+        $this->field = $field;
+        $this->value = $value;
     }
 
     /**

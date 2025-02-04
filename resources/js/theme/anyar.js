@@ -255,4 +255,8 @@ document.addEventListener('DOMContentLoaded', ()=> {
             clickable: true
         }
     });
+
+    new VenoBox({
+        selector: '.venobox'
+    });
 });

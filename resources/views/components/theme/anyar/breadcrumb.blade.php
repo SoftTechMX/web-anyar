@@ -1,11 +1,14 @@
 <section id="breadcrumbs" class="breadcrumbs">
     <div class="container">
-
         <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Portfolio Details</li>
+            @foreach ($url_exploded as $part)
+                <li>
+                    <a href="#">
+                        {{ $part }}
+                    </a>
+                </li>
+            @endforeach
         </ol>
-        <h2>Portfolio Details</h2>
-
+        <h2>{{ $titulo ?? '' }}</h2>
     </div>
 </section>

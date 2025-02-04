@@ -178,6 +178,21 @@ document.addEventListener('DOMContentLoaded', () => {
     new PureCounter();
 });
 
+// VanillaTilt
+// =================================================================================== //
+//                   __     __          _ _ _      _____ _ _ _                         //
+//                   \ \   / /_ _ _ __ (_) | | __ |_   _(_) | |_                       //
+//                    \ \ / / _` | '_ \| | | |/ _` || | | | | __|                      //
+//                     \ V / (_| | | | | | | | (_| || | | | | |_                       //
+//                      \_/ \__,_|_| |_|_|_|_|\__,_||_| |_|_|\__|                      //
+//                                                                                     //
+//                              npm i vanilla-tilt                                     //
+//                                                                                     //
+// =================================================================================== //
+import VanillaTilt from 'vanilla-tilt';
+window.VanillaTilt = VanillaTilt;
+
+
 // Swiper JS
 // =================================================================================== //
 //                   ____          _                    _ ____                         //
@@ -203,28 +218,50 @@ const swiper = new Swiper('.swiper', {
     loop: true,
     speed: 600,
     autoplay: {
-        "delay": 5000
+        delay: 5000
     },
     slidesPerView: "auto",
     pagination: {
-        "el": ".swiper-pagination",
-        "type": "bullets",
-        "clickable": true
+        el: ".swiper-pagination",
+        type: "bullets",
+        clickable: true
+    },
+    navigation: {
+        nextEl: '.swiper-button-next', // Selector para el botón "siguiente"
+        prevEl: '.swiper-button-prev'  // Selector para el botón "anterior"
     },
     breakpoints: {
-        "320": {
-            "slidesPerView": 1,
-            "spaceBetween": 40
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 40
         },
-        "1200": {
-            "slidesPerView": 3,
-            "spaceBetween": 10
+        1200: {
+            slidesPerView: 3,
+            spaceBetween: 10
         }
     }
 });
 
 window.swiper = swiper;
 window.Swiper = Swiper;
+
+
+// VenoBox
+// =================================================================================== //
+//                       __     __               ____                                  //
+//                       \ \   / /__ _ __   ___ | __ )  _____  __                      //
+//                        \ \ / / _ \ '_ \ / _ \|  _ \ / _ \ \/ /                      //
+//                         \ V /  __/ | | | (_) | |_) | (_) >  <                       //
+//                          \_/ \___|_| |_|\___/|____/ \___/_/\_\                      //
+//                                                                                     //
+//                                   npm i venobox                                     //
+//                        https://www.npmjs.com/package/venobox                        //
+// =================================================================================== //
+import 'venobox/dist/venobox.css';
+import VenoBox from 'venobox';
+
+window.VenoBox = VenoBox;
+
 
 // FullCalendar
 // =================================================================================== //
@@ -253,3 +290,48 @@ window.timeGridPlugin    = timeGridPlugin;
 window.listPlugin        = listPlugin;
 window.esLocale          = esLocale;
 window.interactionPlugin = interactionPlugin;
+
+// Livewire
+// =================================================================================== //
+//                       _     _                    _                                  //
+//                      | |   (_)_   _______      _(_)_ __ ___                         //
+//                      | |   | \ \ / / _ \ \ /\ / / | '__/ _ \                        //
+//                      | |___| |\ V /  __/\ V  V /| | | |  __/                        //
+//                      |_____|_| \_/ \___| \_/\_/ |_|_|  \___|                        //
+//                                                                                     //
+// =================================================================================== //
+
+/**
+ * Cierra Todos los Modales de Bootstrap que estan abiertos, Normalmente el backend emite
+ * este evento cuando almacena los  datos de manera correcta en las vistas que usan algun 
+ * formulario incrustado en un modal.
+ */
+window.addEventListener('close-modal', function () {
+    let modales = document.querySelectorAll('.modal');
+
+    modales.forEach(element => {
+        let modal = bootstrap.Modal.getInstance(element);
+        if (modal)
+            modal.hide();
+    });
+});
+
+/**
+ * Estos listener son para cuando el backend emite alertas, cuando detectan la alerta se
+ * muestran mediante toastr
+ */
+window.addEventListener('alert-warning', event => {
+    toastr.warning(event.detail, 'Warning!');
+});
+
+window.addEventListener('alert-error', event => {
+    toastr.error(event.detail, 'Error!');
+});
+
+window.addEventListener('alert-danger', event => {
+    toastr.error(event.detail, 'Caution!');
+});
+
+window.addEventListener('alert-success', event => {
+    toastr.success(event.detail, 'Correct!');
+});

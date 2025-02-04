@@ -3,54 +3,30 @@
 @section('banner')
 	<section class="d-flex justify-cntent-center align-items-center" id="hero">
 		<div class="container carousel carousel-fade" data-bs-interval="5000" data-bs-ride="carousel" id="heroCarousel">
-			<!-- Slide 1 -->
+
+			{{-- SLIDE 1 --}}
 			<div class="carousel-item active">
 				<div class="carousel-container">
 					<h2 class="animate__animated animate__fadeInDown">
-						Welcome to <span>Soft Tech MX</span>
+						{{ __('Welcome to')}} <span class="text-info">Rayna {{ __('Platform') }}</span>
 					</h2>
 					<p class="animate__animated animate__fadeInUp">
-						Ut velit est quam dolor ad a aliquid qui aliquid.
-						Sequi ea ut et est quaerat sequi nihil ut aliquam.
-						Occaecati alias dolorem mollitia ut. Similique ea
-						voluptatem. Esse doloremque accusamus repellendus
-						deleniti vel. Minus et tempore modi architecto.
+						{{ __('This CMS is a demo, you can log in to modify the content to your liking and see the potential of the platform.') }}
 					</p>
-					<a class="btn-get-started animate__animated animate__fadeInUp scrollto" href="#about">Read More</a>
+					{{-- <x-theme.anyar.button.read-more /> --}}
 				</div>
 			</div>
 
-			<!-- Slide 2 -->
+			{{-- SLIDE 2 --}}
 			<div class="carousel-item">
 				<div class="carousel-container">
 					<h2 class="animate__animated animate__fadeInDown">
-						Lorem Ipsum Dolor
+						{{ __('Buy this platform Now') }}
 					</h2>
 					<p class="animate__animated animate__fadeInUp">
-						Ut velit est quam dolor ad a aliquid qui aliquid.
-						Sequi ea ut et est quaerat sequi nihil ut aliquam.
-						Occaecati alias dolorem mollitia ut. Similique ea
-						voluptatem. Esse doloremque accusamus repellendus
-						deleniti vel. Minus et tempore modi architecto.
+						{{ __('You can check the platform prices in the following button') }}
 					</p>
-					<a class="btn-get-started animate__animated animate__fadeInUp scrollto" href="#about">Read More</a>
-				</div>
-			</div>
-
-			<!-- Slide 3 -->
-			<div class="carousel-item">
-				<div class="carousel-container">
-					<h2 class="animate__animated animate__fadeInDown">
-						Sequi ea ut et est quaerat
-					</h2>
-					<p class="animate__animated animate__fadeInUp">
-						Ut velit est quam dolor ad a aliquid qui aliquid.
-						Sequi ea ut et est quaerat sequi nihil ut aliquam.
-						Occaecati alias dolorem mollitia ut. Similique ea
-						voluptatem. Esse doloremque accusamus repellendus
-						deleniti vel. Minus et tempore modi architecto.
-					</p>
-					<a class="btn-get-started animate__animated animate__fadeInUp scrollto" href="#about">Read More</a>
+					<x-theme.anyar.button.read-more link="{{ route('plans') }}" />
 				</div>
 			</div>
 
@@ -70,174 +46,119 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
-					<div class="icon-box">
-						<div class="icon">
-							<i class="bx bxl-dribbble"></i>
-						</div>
-						<h4 class="title">
-							<a href="">Lorem Ipsum</a>
-						</h4>
-						<p class="description">
-							Voluptatum deleniti atque corrupti quos
-							dolores et quas molestias excepturi sint
-							occaecati cupiditate non provident
-						</p>
-					</div>
+					<x-theme.anyar.icon-box
+						icono="bx bx-edit-alt"
+						titulo="Customizable Template" 
+						descripcion="Edit the template to your needs with ease, effortlessly using a cPanel." 
+					/>
 				</div>
 
 				<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos-delay="100" data-aos="fade-up">
-					<div class="icon-box">
-						<div class="icon">
-							<i class="bx bx-file"></i>
-						</div>
-						<h4 class="title">
-							<a href="">Sed ut perspiciatis</a>
-						</h4>
-						<p class="description">
-							Duis aute irure dolor in reprehenderit in
-							voluptate velit esse cillum dolore eu fugiat
-							nulla pariatur
-						</p>
-					</div>
+					<x-theme.anyar.icon-box
+						icono="bx bx-user"
+						titulo="Role and Permission Management" 
+						descripcion="With a user roles and permissions mechanism you can accurately manage each user's privileges." 
+					/>
 				</div>
 
 				<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos-delay="200" data-aos="fade-up">
-					<div class="icon-box">
-						<div class="icon">
-							<i class="bx bx-tachometer"></i>
-						</div>
-						<h4 class="title">
-							<a href="">Magni Dolores</a>
-						</h4>
-						<p class="description">
-							Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt
-							mollit anim id est laborum
-						</p>
-					</div>
+					<x-theme.anyar.icon-box
+						icono="bx bx-plug"
+						titulo="Modular Based System" 
+						descripcion="Our module-based system allows you to enable and disable sections using switches in the cPanel." 
+					/>
 				</div>
 
 				<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos-delay="300" data-aos="fade-up">
-					<div class="icon-box">
-						<div class="icon">
-							<i class="bx bx-layer"></i>
-						</div>
-						<h4 class="title"><a href="">Nemo Enim</a></h4>
-						<p class="description">
-							At vero eos et accusamus et iusto odio
-							dignissimos ducimus qui blanditiis
-							praesentium voluptatum deleniti atque
-						</p>
-					</div>
+					<x-theme.anyar.icon-box
+						icono="bx bx-support"
+						titulo="Constant Updates" 
+						descripcion="Receive constant updates, technical support and access to many resources such as video tutorials, code documentation, ER diagrams and more." 
+					/>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!-- End Icon Boxes Section -->
 
-	<!-- ======= About Us Section ======= -->
 	<section class="about" id="about">
 		<div class="container" data-aos="fade-up">
 			<div class="section-title">
-				<h2>About Us</h2>
+				<h2>
+					{{ __('About Us') }}
+				</h2>
 				<p>
-					Magnam dolores commodi suscipit. Necessitatibus eius
-					consequatur ex aliquid fuga eum quidem. Sit sint
-					consectetur velit. Quisquam quos quisquam
-					cupiditate. Et nemo qui impedit suscipit alias ea.
-					Quia fugiat sit in iste officiis commodi quidem hic
-					quas.
+					{{ __('We are a company passionate about technology and innovation, dedicated to offering comprehensive solutions in software development, creation of web and mobile applications, penetration testing, and services related to IT and systems engineering.') }}
 				</p>
 			</div>
 
 			<div class="row content">
 				<div class="col-lg-6">
+					<h5 class="text-primary fw-bold">
+						{{ __('Our Mission') }}
+					</h5>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur
-						adipiscing elit, sed do eiusmod tempor
-						incididunt ut labore et dolore magna aliqua.
+						{{ __('Our mission is to be a strategic ally in the digital transformation of companies and organizations. We are dedicated to developing customized technological solutions that boost the productivity, efficiency and competitiveness of our clients in a constantly evolving digital world. By using innovative technologies, agile development practices and a focus on customer needs, we seek to deliver high-quality projects that generate tangible value for their businesses.') }}
 					</p>
-					<ul>
-						<li>
-							<i class="ri-check-double-line"></i> Ullamco
-							laboris nisi ut aliquip ex ea commodo
-							consequat
-						</li>
-						<li>
-							<i class="ri-check-double-line"></i> Duis
-							aute irure dolor in reprehenderit in
-							voluptate velit
-						</li>
-						<li>
-							<i class="ri-check-double-line"></i> Ullamco
-							laboris nisi ut aliquip ex ea commodo
-							consequat
-						</li>
-					</ul>
 				</div>
 				<div class="col-lg-6 pt-4 pt-lg-0">
+					<h5 class="text-primary fw-bold">
+						{{ __('Our Vision') }}
+					</h5>
 					<p>
-						Ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in
-						reprehenderit in voluptate velit esse cillum
-						dolore eu fugiat nulla pariatur. Excepteur sint
-						occaecat cupidatat non proident, sunt in culpa
-						qui officia deserunt mollit anim id est laborum.
+						{{ __('Our vision is to establish ourselves as a leading reference in technological innovation, software development and cybersecurity at a national and international level. We aspire to be recognized for our ability to anticipate market needs, offering disruptive technological solutions that drive the business success of our clients.') }}
 					</p>
-					<a class="btn-learn-more" href="#">Learn More</a>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!-- End About Us Section -->
 
-	<!-- ======= Clients Section ======= -->
 	<section class="clients" id="clients">
 		<div class="container" data-aos="zoom-in">
+			<div class="section-title">
+				<h2>
+					{{ __('Our Clients') }}
+				</h2>
+			</div>
 			<div class="clients-slider swiper">
 				<div class="swiper-wrapper align-items-center">
 					<div class="swiper-slide">
-						<img alt="" class="img-fluid" src="assets/img/clients/client-1.png" />
+						<img alt="" class="img-fluid" src="{{ asset('/storage/img/clients/client-1.png') }}" />
 					</div>
 					<div class="swiper-slide">
-						<img alt="" class="img-fluid" src="assets/img/clients/client-2.png" />
+						<img alt="" class="img-fluid" src="{{ asset('/storage/img/clients/client-2.png') }}" />
 					</div>
 					<div class="swiper-slide">
-						<img alt="" class="img-fluid" src="assets/img/clients/client-3.png" />
+						<img alt="" class="img-fluid" src="{{ asset('/storage/img/clients/client-3.png') }}" />
 					</div>
 					<div class="swiper-slide">
-						<img alt="" class="img-fluid" src="assets/img/clients/client-4.png" />
+						<img alt="" class="img-fluid" src="{{ asset('/storage/img/clients/client-4.png') }}" />
 					</div>
 					<div class="swiper-slide">
-						<img alt="" class="img-fluid" src="assets/img/clients/client-5.png" />
+						<img alt="" class="img-fluid" src="{{ asset('/storage/img/clients/client-5.png') }}" />
 					</div>
 					<div class="swiper-slide">
-						<img alt="" class="img-fluid" src="assets/img/clients/client-6.png" />
+						<img alt="" class="img-fluid" src="{{ asset('/storage/img/clients/client-6.png') }}" />
 					</div>
 					<div class="swiper-slide">
-						<img alt="" class="img-fluid" src="assets/img/clients/client-7.png" />
+						<img alt="" class="img-fluid" src="{{ asset('/storage/img/clients/client-7.png') }}" />
 					</div>
 					<div class="swiper-slide">
-						<img alt="" class="img-fluid" src="assets/img/clients/client-8.png" />
+						<img alt="" class="img-fluid" src="{{ asset('/storage/img/clients/client-8.png') }}" />
 					</div>
 				</div>
 				<div class="swiper-pagination"></div>
 			</div>
 		</div>
 	</section>
-	<!-- End Clients Section -->
 
-	<!-- ======= Why Us Section ======= -->
 	<section class="why-us" id="why-us">
 		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-5 align-items-stretch position-relative video-box" data-aos="fade-right" style="
-                                background-image: url('assets/img/why-us.jpg');
-                            ">
-					<a class="venobox play-btn mb-4" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=jDDaplaOz7Q"></a>
+			<div class="row d-flex justify-content-center">
+				<div class=" col-5 col-lg-5 align-items-stretch position-relative video-box bg-danger" data-aos="fade-right">
+					<a class="venobox play-btn mb-4" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=h8TCOrPwp08&t=9s"></a>
 				</div>
 
-				<div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch" data-aos="fade-left">
+				<div class="col-7 col-lg-7 d-flex flex-column justify-content-center align-items-stretch" data-aos="fade-left">
 					<div class="content">
 						<h3>
 							Eum ipsam laborum deleniti
@@ -320,96 +241,44 @@
 			</div>
 		</div>
 	</section>
-	<!-- End Why Us Section -->
 
-	<!-- ======= Services Section ======= -->
 	<section class="services" id="services">
 		<div class="container" data-aos="fade-up">
 			<div class="section-title">
-				<h2>Services</h2>
+				<h2>
+					{{ __('Services') }}
+				</h2>
 				<p>
-					Magnam dolores commodi suscipit. Necessitatibus eius
-					consequatur ex aliquid fuga eum quidem. Sit sint
-					consectetur velit. Quisquam quos quisquam
-					cupiditate. Et nemo qui impedit suscipit alias ea.
-					Quia fugiat sit in iste officiis commodi quidem hic
-					quas.
+					{{ __("With our CMS system, you have complete control to add, edit, and delete services according to your needs. Using a user-friendly cPanel interface, you can manage your services effortlessly without requiring technical expertise. The intuitive design ensures a seamless experience, allowing you to customize service details, descriptions, and images in just a few clicks. Whether you're updating existing services or introducing new ones, the system is designed to adapt to your preferences, providing flexibility and efficiency for your business operations.") }}
 				</p>
 			</div>
 
-			<div class="row">
-				<div class="col-md-6 d-flex align-items-stretch" data-aos-delay="100" data-aos="fade-up">
-					<div class="icon-box">
-						<i class="bi bi-card-checklist"></i>
-						<h4><a href="#">Lorem Ipsum</a></h4>
-						<p>
-							Voluptatum deleniti atque corrupti quos
-							dolores et quas molestias excepturi sint
-							occaecati cupiditate non provident
-						</p>
-					</div>
-				</div>
-				<div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos-delay="200" data-aos="fade-up">
-					<div class="icon-box">
-						<i class="bi bi-bar-chart"></i>
-						<h4><a href="#">Dolor Sitema</a></h4>
-						<p>
-							Minim veniam, quis nostrud exercitation
-							ullamco laboris nisi ut aliquip ex ea
-							commodo consequat tarad limino ata
-						</p>
-					</div>
-				</div>
-				<div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos-delay="300" data-aos="fade-up">
-					<div class="icon-box">
-						<i class="bi bi-binoculars"></i>
-						<h4><a href="#">Sed ut perspiciatis</a></h4>
-						<p>
-							Duis aute irure dolor in reprehenderit in
-							voluptate velit esse cillum dolore eu fugiat
-							nulla pariatur
-						</p>
-					</div>
-				</div>
-				<div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos-delay="400" data-aos="fade-up">
-					<div class="icon-box">
-						<i class="bi bi-brightness-high"></i>
-						<h4><a href="#">Nemo Enim</a></h4>
-						<p>
-							Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt
-							mollit anim id est laborum
-						</p>
-					</div>
-				</div>
-				<div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos-delay="500" data-aos="fade-up">
-					<div class="icon-box">
-						<i class="bi bi-calendar4-week"></i>
-						<h4><a href="#">Magni Dolore</a></h4>
-						<p>
-							At vero eos et accusamus et iusto odio
-							dignissimos ducimus qui blanditiis
-							praesentium voluptatum deleniti atque
-						</p>
-					</div>
-				</div>
-				<div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos-delay="600" data-aos="fade-up">
-					<div class="icon-box">
-						<i class="bi bi-briefcase"></i>
-						<h4><a href="#">Eiusmod Tempor</a></h4>
-						<p>
-							Et harum quidem rerum facilis est et
-							expedita distinctio. Nam libero tempore, cum
-							soluta nobis est eligendi
-						</p>
-					</div>
-				</div>
+			<div class="d-flex flex-wrap justify-content-center">
+				@isset($services)
+				
+					@php
+						$miliseconds_delay = 100;
+					@endphp
+
+					@foreach ($services as $service)
+
+						<div class="col-5 m-2 flex-" data-aos-delay="{{ $miliseconds_delay }}" data-aos="fade-up">
+							<x-theme.anyar.service-card 
+								titulo='{{ __("{$service->title}") }}'
+								icono="{{ $service->icon }}"
+								descripcion="{{ $service->description }}"
+							/>
+						</div>
+
+						@php
+							$miliseconds_delay += 100;
+						@endphp
+					@endforeach
+				@endisset
 			</div>
 		</div>
 	</section>
-	<!-- End Services Section -->
 
-	<!-- ======= Cta Section ======= -->
 	<section class="cta" id="cta">
 		<div class="container">
 			<div class="row" data-aos="zoom-in">
@@ -429,20 +298,15 @@
 			</div>
 		</div>
 	</section>
-	<!-- End Cta Section -->
 
-	<!-- ======= Portfoio Section ======= -->
-	<section class="portfoio" id="portfolio">
+	<section class="portfolio" id="portfolio">
 		<div class="container" data-aos="fade-up">
 			<div class="section-title">
-				<h2>Portfoio</h2>
+				<h2>
+					{{ __('Products') }}
+				</h2>
 				<p>
-					Magnam dolores commodi suscipit. Necessitatibus eius
-					consequatur ex aliquid fuga eum quidem. Sit sint
-					consectetur velit. Quisquam quos quisquam
-					cupiditate. Et nemo qui impedit suscipit alias ea.
-					Quia fugiat sit in iste officiis commodi quidem hic
-					quas.
+					{{ __('With our CMS you can have a product catalog and manage them from a cPanel, our interactive catalog allows you to offer your products in a more friendly and simple way to your customers.') }}
 				</p>
 			</div>
 
@@ -452,108 +316,108 @@
 						<li class="filter-active" data-filter="*">
 							All
 						</li>
-						<li data-filter=".filter-app">App</li>
-						<li data-filter=".filter-card">Card</li>
-						<li data-filter=".filter-web">Web</li>
+						<li data-filter=".filter-app">Category 1</li>
+						<li data-filter=".filter-card">Category 2</li>
+						<li data-filter=".filter-web">Category 3</li>
 					</ul>
 				</div>
 			</div>
 
 			<div class="row portfolio-container">
 				<div class="col-lg-4 col-md-6 portfolio-item filter-app">
-					<img alt="" class="img-fluid" src="assets/img/portfolio/portfolio-1.jpg" />
+					<img alt="" class="img-fluid" src="/storage/img/portfolio/portfolio-1.jpg" />
 					<div class="portfolio-info">
 						<h4>App 1</h4>
 						<p>App</p>
-						<a class="portfolio-lightbox preview-link" data-gallery="portfolioGallery" href="assets/img/portfolio/portfolio-1.jpg" title="App 1"><i class="bx bx-plus"></i></a>
+						<a class="portfolio-lightbox preview-link" data-gallery="portfolioGallery" href="/storage/img/portfolio/portfolio-1.jpg" title="App 1"><i class="bx bx-plus"></i></a>
 						<a class="details-link" href="portfolio-details.html" title="More Details"><i
 								class="bx bx-link"></i></a>
 					</div>
 				</div>
 
 				<div class="col-lg-4 col-md-6 portfolio-item filter-web">
-					<img alt="" class="img-fluid" src="assets/img/portfolio/portfolio-2.jpg" />
+					<img alt="" class="img-fluid" src="/storage/img/portfolio/portfolio-2.jpg" />
 					<div class="portfolio-info">
 						<h4>Web 3</h4>
 						<p>Web</p>
-						<a class="portfolio-lightbox preview-link" data-gallery="portfolioGallery" href="assets/img/portfolio/portfolio-2.jpg" title="Web 3"><i class="bx bx-plus"></i></a>
+						<a class="portfolio-lightbox preview-link" data-gallery="portfolioGallery" href="/storage/img/portfolio/portfolio-2.jpg" title="Web 3"><i class="bx bx-plus"></i></a>
 						<a class="details-link" href="portfolio-details.html" title="More Details"><i
 								class="bx bx-link"></i></a>
 					</div>
 				</div>
 
 				<div class="col-lg-4 col-md-6 portfolio-item filter-app">
-					<img alt="" class="img-fluid" src="assets/img/portfolio/portfolio-3.jpg" />
+					<img alt="" class="img-fluid" src="/storage/img/portfolio/portfolio-3.jpg" />
 					<div class="portfolio-info">
 						<h4>App 2</h4>
 						<p>App</p>
-						<a class="portfolio-lightbox preview-link" data-gallery="portfolioGallery" href="assets/img/portfolio/portfolio-3.jpg" title="App 2"><i class="bx bx-plus"></i></a>
+						<a class="portfolio-lightbox preview-link" data-gallery="portfolioGallery" href="/storage/img/portfolio/portfolio-3.jpg" title="App 2"><i class="bx bx-plus"></i></a>
 						<a class="details-link" href="portfolio-details.html" title="More Details"><i
 								class="bx bx-link"></i></a>
 					</div>
 				</div>
 
 				<div class="col-lg-4 col-md-6 portfolio-item filter-card">
-					<img alt="" class="img-fluid" src="assets/img/portfolio/portfolio-4.jpg" />
+					<img alt="" class="img-fluid" src="/storage/img/portfolio/portfolio-4.jpg" />
 					<div class="portfolio-info">
 						<h4>Card 2</h4>
 						<p>Card</p>
-						<a class="portfolio-lightbox preview-link" data-gallery="portfolioGallery" href="assets/img/portfolio/portfolio-4.jpg" title="Card 2"><i class="bx bx-plus"></i></a>
+						<a class="portfolio-lightbox preview-link" data-gallery="portfolioGallery" href="/storage/img/portfolio/portfolio-4.jpg" title="Card 2"><i class="bx bx-plus"></i></a>
 						<a class="details-link" href="portfolio-details.html" title="More Details"><i
 								class="bx bx-link"></i></a>
 					</div>
 				</div>
 
 				<div class="col-lg-4 col-md-6 portfolio-item filter-web">
-					<img alt="" class="img-fluid" src="assets/img/portfolio/portfolio-5.jpg" />
+					<img alt="" class="img-fluid" src="/storage/img/portfolio/portfolio-5.jpg" />
 					<div class="portfolio-info">
 						<h4>Web 2</h4>
 						<p>Web</p>
-						<a class="portfolio-lightbox preview-link" data-gallery="portfolioGallery" href="assets/img/portfolio/portfolio-5.jpg" title="Web 2"><i class="bx bx-plus"></i></a>
+						<a class="portfolio-lightbox preview-link" data-gallery="portfolioGallery" href="/storage/img/portfolio/portfolio-5.jpg" title="Web 2"><i class="bx bx-plus"></i></a>
 						<a class="details-link" href="portfolio-details.html" title="More Details"><i
 								class="bx bx-link"></i></a>
 					</div>
 				</div>
 
 				<div class="col-lg-4 col-md-6 portfolio-item filter-app">
-					<img alt="" class="img-fluid" src="assets/img/portfolio/portfolio-6.jpg" />
+					<img alt="" class="img-fluid" src="/storage/img/portfolio/portfolio-6.jpg" />
 					<div class="portfolio-info">
 						<h4>App 3</h4>
 						<p>App</p>
-						<a class="portfolio-lightbox preview-link" data-gallery="portfolioGallery" href="assets/img/portfolio/portfolio-6.jpg" title="App 3"><i class="bx bx-plus"></i></a>
+						<a class="portfolio-lightbox preview-link" data-gallery="portfolioGallery" href="/storage/img/portfolio/portfolio-6.jpg" title="App 3"><i class="bx bx-plus"></i></a>
 						<a class="details-link" href="portfolio-details.html" title="More Details"><i
 								class="bx bx-link"></i></a>
 					</div>
 				</div>
 
 				<div class="col-lg-4 col-md-6 portfolio-item filter-card">
-					<img alt="" class="img-fluid" src="assets/img/portfolio/portfolio-7.jpg" />
+					<img alt="" class="img-fluid" src="/storage/img/portfolio/portfolio-7.jpg" />
 					<div class="portfolio-info">
 						<h4>Card 1</h4>
 						<p>Card</p>
-						<a class="portfolio-lightbox preview-link" data-gallery="portfolioGallery" href="assets/img/portfolio/portfolio-7.jpg" title="Card 1"><i class="bx bx-plus"></i></a>
+						<a class="portfolio-lightbox preview-link" data-gallery="portfolioGallery" href="/storage/img/portfolio/portfolio-7.jpg" title="Card 1"><i class="bx bx-plus"></i></a>
 						<a class="details-link" href="portfolio-details.html" title="More Details"><i
 								class="bx bx-link"></i></a>
 					</div>
 				</div>
 
 				<div class="col-lg-4 col-md-6 portfolio-item filter-card">
-					<img alt="" class="img-fluid" src="assets/img/portfolio/portfolio-8.jpg" />
+					<img alt="" class="img-fluid" src="/storage/img/portfolio/portfolio-8.jpg" />
 					<div class="portfolio-info">
 						<h4>Card 3</h4>
 						<p>Card</p>
-						<a class="portfolio-lightbox preview-link" data-gallery="portfolioGallery" href="assets/img/portfolio/portfolio-8.jpg" title="Card 3"><i class="bx bx-plus"></i></a>
+						<a class="portfolio-lightbox preview-link" data-gallery="portfolioGallery" href="/storage/img/portfolio/portfolio-8.jpg" title="Card 3"><i class="bx bx-plus"></i></a>
 						<a class="details-link" href="portfolio-details.html" title="More Details"><i
 								class="bx bx-link"></i></a>
 					</div>
 				</div>
 
 				<div class="col-lg-4 col-md-6 portfolio-item filter-web">
-					<img alt="" class="img-fluid" src="assets/img/portfolio/portfolio-9.jpg" />
+					<img alt="" class="img-fluid" src="/storage/img/portfolio/portfolio-9.jpg" />
 					<div class="portfolio-info">
 						<h4>Web 3</h4>
 						<p>Web</p>
-						<a class="portfolio-lightbox preview-link" data-gallery="portfolioGallery" href="assets/img/portfolio/portfolio-9.jpg" title="Web 3"><i class="bx bx-plus"></i></a>
+						<a class="portfolio-lightbox preview-link" data-gallery="portfolioGallery" href="/storage/img/portfolio/portfolio-9.jpg" title="Web 3"><i class="bx bx-plus"></i></a>
 						<a class="details-link" href="portfolio-details.html" title="More Details"><i
 								class="bx bx-link"></i></a>
 					</div>
@@ -561,212 +425,44 @@
 			</div>
 		</div>
 	</section>
-	<!-- End Portfoio Section -->
 
-	<!-- ======= Team Section ======= -->
 	<section class="team section-bg" id="team">
 		<div class="container" data-aos="fade-up">
 			<div class="section-title">
-				<h2>Team</h2>
+				<h2>
+					{{ __('Our Team') }}
+				</h2>
 				<p>
-					Magnam dolores commodi suscipit. Necessitatibus eius
-					consequatur ex aliquid fuga eum quidem. Sit sint
-					consectetur velit. Quisquam quos quisquam
-					cupiditate. Et nemo qui impedit suscipit alias ea.
-					Quia fugiat sit in iste officiis commodi quidem hic
-					quas.
+
 				</p>
 			</div>
 
-			<div class="row">
-				<div class="col-lg-6" data-aos-delay="100" data-aos="fade-up">
-					<div class="member d-flex align-items-start">
-						<div class="pic">
-							<img alt="" class="img-fluid" src="assets/img/team/team-1.jpg" />
-						</div>
-						<div class="member-info">
-							<h4>Walter White</h4>
-							<span>Chief Executive Officer</span>
-							<p>
-								Explicabo voluptatem mollitia et
-								repellat qui dolorum quasi
-							</p>
-							<div class="social">
-								<a href=""><i class="ri-twitter-fill"></i></a>
-								<a href=""><i class="ri-facebook-fill"></i></a>
-								<a href=""><i class="ri-instagram-fill"></i></a>
-								<a href="">
-									<i class="ri-linkedin-box-fill"></i>
-								</a>
-							</div>
-						</div>
+			<div class="d-flex justify-content-center flex-wrap">
+				@foreach ($team as $person)
+					<div class="col-5 m-2" data-aos-delay="100" data-aos="fade-up">
+						<x-theme.anyar.card.person-card :person="$person" />
 					</div>
-				</div>
-
-				<div class="col-lg-6 mt-4 mt-lg-0" data-aos-delay="200" data-aos="fade-up">
-					<div class="member d-flex align-items-start">
-						<div class="pic">
-							<img alt="" class="img-fluid" src="assets/img/team/team-2.jpg" />
-						</div>
-						<div class="member-info">
-							<h4>Sarah Jhonson</h4>
-							<span>Product Manager</span>
-							<p>
-								Aut maiores voluptates amet et quis
-								praesentium qui senda para
-							</p>
-							<div class="social">
-								<a href=""><i class="ri-twitter-fill"></i></a>
-								<a href=""><i class="ri-facebook-fill"></i></a>
-								<a href=""><i class="ri-instagram-fill"></i></a>
-								<a href="">
-									<i class="ri-linkedin-box-fill"></i>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-6 mt-4" data-aos-delay="300" data-aos="fade-up">
-					<div class="member d-flex align-items-start">
-						<div class="pic">
-							<img alt="" class="img-fluid" src="assets/img/team/team-3.jpg" />
-						</div>
-						<div class="member-info">
-							<h4>William Anderson</h4>
-							<span>CTO</span>
-							<p>
-								Quisquam facilis cum velit laborum
-								corrupti fuga rerum quia
-							</p>
-							<div class="social">
-								<a href=""><i class="ri-twitter-fill"></i></a>
-								<a href=""><i class="ri-facebook-fill"></i></a>
-								<a href=""><i class="ri-instagram-fill"></i></a>
-								<a href="">
-									<i class="ri-linkedin-box-fill"></i>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-6 mt-4" data-aos-delay="400" data-aos="fade-up">
-					<div class="member d-flex align-items-start">
-						<div class="pic">
-							<img alt="" class="img-fluid" src="assets/img/team/team-4.jpg" />
-						</div>
-						<div class="member-info">
-							<h4>Amanda Jepson</h4>
-							<span>Accountant</span>
-							<p>
-								Dolorum tempora officiis odit laborum
-								officiis et et accusamus
-							</p>
-							<div class="social">
-								<a href=""><i class="ri-twitter-fill"></i></a>
-								<a href=""><i class="ri-facebook-fill"></i></a>
-								<a href=""><i class="ri-instagram-fill"></i></a>
-								<a href="">
-									<i class="ri-linkedin-box-fill"></i>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
+				@endforeach
 			</div>
 		</div>
 	</section>
-	<!-- End Team Section -->
 
-	<!-- ======= Pricing Section ======= -->
 	<section class="pricing" id="pricing">
 		<div class="container" data-aos="fade-up">
 			<div class="section-title">
-				<h2>Pricing</h2>
+				<h2>
+					{{ __('Pricing') }}
+				</h2>
 				<p>
-					Magnam dolores commodi suscipit. Necessitatibus eius
-					consequatur ex aliquid fuga eum quidem. Sit sint
-					consectetur velit. Quisquam quos quisquam
-					cupiditate. Et nemo qui impedit suscipit alias ea.
-					Quia fugiat sit in iste officiis commodi quidem hic
-					quas.
+					{{ __("You're currently exploring a powerful Content Management System (CMS) designed to simplify website creation and management. This CMS is available for purchase, offering you complete control over your personal or professional online presence.") }}
+				
+					{{ __("Take ownership of this versatile CMS and build the website you've always wanted. With just a few clicks, you can unlock the full potential of this platform for your personal or business use.") }}
 				</p>
 			</div>
 
-			<div class="row">
-				<div class="col-lg-3 col-md-6" data-aos-delay="100" data-aos="fade-up">
-					<div class="box">
-						<h3>Free</h3>
-						<h4><sup>$</sup>0<span> / month</span></h4>
-						<ul>
-							<li>Aida dere</li>
-							<li>Nec feugiat nisl</li>
-							<li>Nulla at volutpat dola</li>
-							<li class="na">Pharetra massa</li>
-							<li class="na">Massa ultricies mi</li>
-						</ul>
-						<div class="btn-wrap">
-							<a class="btn-buy" href="#">Buy Now</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-3 col-md-6 mt-4 mt-md-0" data-aos-delay="200" data-aos="fade-up">
-					<div class="box featured">
-						<h3>Business</h3>
-						<h4><sup>$</sup>19<span> / month</span></h4>
-						<ul>
-							<li>Aida dere</li>
-							<li>Nec feugiat nisl</li>
-							<li>Nulla at volutpat dola</li>
-							<li>Pharetra massa</li>
-							<li class="na">Massa ultricies mi</li>
-						</ul>
-						<div class="btn-wrap">
-							<a class="btn-buy" href="#">Buy Now</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos-delay="300" data-aos="fade-up">
-					<div class="box">
-						<h3>Developer</h3>
-						<h4><sup>$</sup>29<span> / month</span></h4>
-						<ul>
-							<li>Aida dere</li>
-							<li>Nec feugiat nisl</li>
-							<li>Nulla at volutpat dola</li>
-							<li>Pharetra massa</li>
-							<li>Massa ultricies mi</li>
-						</ul>
-						<div class="btn-wrap">
-							<a class="btn-buy" href="#">Buy Now</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos-delay="400" data-aos="fade-up">
-					<div class="box">
-						<span class="advanced">Advanced</span>
-						<h3>Ultimate</h3>
-						<h4><sup>$</sup>49<span> / month</span></h4>
-						<ul>
-							<li>Aida dere</li>
-							<li>Nec feugiat nisl</li>
-							<li>Nulla at volutpat dola</li>
-							<li>Pharetra massa</li>
-							<li>Massa ultricies mi</li>
-						</ul>
-						<div class="btn-wrap">
-							<a class="btn-buy" href="#">Buy Now</a>
-						</div>
-					</div>
-				</div>
-			</div>
+			<x-theme.anyar.price-cards />
 		</div>
 	</section>
-	<!-- End Pricing Section -->
 
 	<section class="faq section-bg" id="faq">
 		<div class="container" data-aos="fade-up">
@@ -778,24 +474,24 @@
 
 			<div class="faq-list">
 				<ul>
-					@isset($preguntas_frecuentes)
+					@isset($faqs)
 
 						@php
 							$retraso_en_milisegundos = 100;
 						@endphp
 
-						@forelse ($preguntas_frecuentes as $faq)
+						@forelse ($faqs as $faq)
 
 							<li data-aos-delay="{{ $retraso_en_milisegundos }}" data-aos="fade-up" data-aos="fade-up">
 								<i class="bx bx-help-circle icon-help"></i>
 								<a class="collapse" data-bs-target="#faq-list-{{ $loop->iteration }}" data-bs-toggle="collapse">
-									{{ $faq->pregunta  }}
+									{{ $faq->question  }}
 									<i class="bx bx-chevron-down icon-show"></i>
 									<i class="bx bx-chevron-up icon-close"></i>
 								</a>
 								<div class="collapse" data-bs-parent=".faq-list" id="faq-list-{{ $loop->iteration }}">
 									<p>
-										{{ $faq->respuesta }}
+										{{ $faq->answer }}
 									</p>
 								</div>
 							</li>
@@ -810,7 +506,7 @@
 								</p>
 	
 								<a href="{{ route('pregunta-frecuente.create') }}" class="btn btn-primary d-inline p-2">
-									{{ __('Add a question here!') }}
+									{{ __('Add your question here!') }}
 								</a>
 							</div>
 						@endforelse

@@ -1,11 +1,17 @@
 <div class="fixed-top d-flex align-items-center topbar-inner-pages" id="topbar">
 	<div class="container d-flex align-items-center justify-content-center justify-content-md-between">
 		<div class="contact-info d-flex align-items-center">
-			<i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">soft.tech.mexico@gmail.com</a>
-			<i class="bi bi-phone-fill phone-icon"></i> +1 5589 55488 55
+			<i class='bx bx-envelope'></i>
+			<a href="mailto:contact@example.com" class="">
+				{{ $app_settings->email }}
+			</a>
+			<i class='bx bx-phone-call phone-icon'></i>
+			{{ $app_settings->phone }}
 		</div>
 		<div class="cta d-none d-md-block">
-			<a class="scrollto" href="#about">Get Started</a>
+			<a class="" href="{{ route('plans') }}">
+				{{ __('Buy This Website!') }}
+			</a>
 		</div>
 	</div>
 </div>
@@ -16,7 +22,7 @@
 		{{-- TEXTO --}}
 		<h1 class="logo">
 			<a href="{{ route('landing') }}">
-				Soft Tech MX
+				{{ $app_settings->name }}
 			</a>
 		</h1>
 
@@ -29,61 +35,89 @@
 
 		<nav class="navbar" id="navbar">
 			<ul>
-				@foreach (config('menu') as $menu)
+				{{-- CARGAMOS LOS MENUS DE LA BASE DE DATOS --}}
+				@foreach ($ui_menus as $menu)
 
-				<li>
-					<a href="{{ route($menu['route']) }}" class="nav-link">
-						<i class="{{ $menu['icon'] }}"></i>
-						<span>
-							{{ $menu['label'] }}
-						</span>
-					</a>
-				</li>
+					@if($menu->parent_menu == null)
+						<x-theme.anyar.navbar.menu :menu="$menu" />
+					@endif
 
 				@endforeach
 
-				{{--
-				<li>
-					<a class="nav-link scrollto active" href="#hero">Home</a>
-				</li>
-				<li>
-					<a class="nav-link scrollto" href="#about">About</a>
-				</li>
-				{{-- 
-				<li class="dropdown">
-					<a href="#"><span>Drop Down</span>
-						<i class="bi bi-chevron-down"></i></a>
-					<ul>
-						<li><a href="#">Drop Down 1</a></li>
-						<li class="dropdown">
-							<a href="#"><span>Deep Drop Down</span>
-								<i class="bi bi-chevron-right"></i></a>
-							<ul>
-								<li>
-									<a href="#">Deep Drop Down 1</a>
-								</li>
-								<li>
-									<a href="#">Deep Drop Down 2</a>
-								</li>
-								<li>
-									<a href="#">Deep Drop Down 3</a>
-								</li>
-								<li>
-									<a href="#">Deep Drop Down 4</a>
-								</li>
-								<li>
-									<a href="#">Deep Drop Down 5</a>
-								</li>
-							</ul>
-						</li>
-						<li><a href="#">Drop Down 2</a></li>
-						<li><a href="#">Drop Down 3</a></li>
-						<li><a href="#">Drop Down 4</a></li>
-					</ul>
-				</li>
-				--}}
+				@auth
+					{{-- MENU DE PERFIL DE USUARIO --}}
+					<li class="dropdown">
+						<a href="#">
+							<i class=""></i>
+							<span>
+								{{ __('Profile') }}
+							</span>
+						</a>
+						<ul>
+							@role('admin')
+							<li>
+								<a href="{{ route('cpanel') }}">
+									{{ __('cPanel') }}
+								</a>
+							</li>
+							
+							<li>
+								<a href="{{ route('user.settings') }}">
+									{{ __('Settings') }}
+								</a>
+							</li>
+							@endrole
+
+							<li>
+								<a href="{{ route('user.profile') }}">
+									{{ __('My Profile') }}
+								</a>
+							</li>							
+
+							@role('admin')
+							<li>
+								<a href="{{ route('dashboard') }}">
+									{{ __('Dashboard') }}
+								</a>
+							</li>
+							@endrole
+
+							<li>
+								<form method="POST" action="{{ route('logout') }}" id="form-logout">
+									@csrf
+								</form>
+
+								<a href="#" onclick="document.getElementById('form-logout').submit()">
+									{{ __('Logout') }}
+								</a>
+							</li>
+						</ul>
+					</li>
+				@else
+					{{-- MENU DE LOGIN --}}
+					<li class="dropdown">
+						<a href="#">
+							<i class="bx bx-chevrons-down"></i>
+							<span>
+								{{ __('Users') }}
+							</span>
+						</a>
+						<ul>
+							<li>
+								<a href="{{ route('login') }}">
+									{{ __('Login') }}
+								</a>
+							</li>
+							<li>
+								<a href="{{ route('register') }}">
+									{{ __('Register') }}
+								</a>
+							</li>
+						</ul>
+					</li>
+				@endauth
 			</ul>
-			<i class="bi bi-list mobile-nav-toggle"></i>
+			<i class='bx bx-menu mobile-nav-toggle'></i>
 		</nav>
 	</div>
 </header>

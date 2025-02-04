@@ -4,22 +4,28 @@
 	<head>
 		<meta charset="utf-8">
 		<meta content="width=device-width, initial-scale=1" name="viewport">
-
-		<!-- CSRF Token -->
 		<meta content="{{ csrf_token() }}" name="csrf-token">
 
-		<title>{{ config('app.name') }}</title>
+		<title>
+			{{ $app_settings->name }}
+		</title>
 
 		@if (env('APP_ENV') === 'production')
-			<link href="{{ asset('build/assets/app-DlIfEsrR.css') }}" rel="stylesheet">
 			<link href="{{ asset('build/assets/app-ZTGNsFtH.css') }}" rel="stylesheet">
-			<link href="{{ asset('build/assets/anyar-pvi7wNRl.css') }}" rel="stylesheet">
+			<link href="{{ asset('build/assets/app-Bnph2-Xj.css') }}" rel="stylesheet">
+			<link href="{{ asset('build/assets/anyar-DBX-Y4Lr.css') }}" rel="stylesheet">
+
+			{{-- COMPONENTS --}}
+			<link href="{{ asset('build/assets/buttons-J8CAK1va.css') }}" rel="stylesheet">
+			<link href="{{ asset('build/assets/cards-CJ3tvr_M.css') }}" rel="stylesheet">
 		@else
 			@vite([
 				'resources/js/app.js',
 				'resources/sass/app.scss',
 				'resources/js/theme/anyar.js',
 				'resources/sass/theme/anyar.scss',
+				'resources/sass/components/buttons.scss',
+				'resources/sass/components/cards.scss',
 			])
 		@endif
 
@@ -55,8 +61,8 @@
 		@livewire('modal.delete')
 		
 		@if (env('APP_ENV') === 'production')
-			<script src="{{ asset('build/assets/app-Bo6JFT0S.js') }}"></script>
-			<script src="{{ asset('build/assets/anyar-BJsVquAm.js') }}"></script>
+			<script src="{{ asset('build/assets/app-JgRWt-C9.js') }}"></script>
+			<script src="{{ asset('build/assets/anyar-CPzuXSNx.js') }}"></script>
 		@endif
 	
 		@livewireScripts
