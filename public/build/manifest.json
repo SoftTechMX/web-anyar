@@ -1,0 +1,61 @@
+{
+  "node_modules/boxicons/fonts/boxicons.eot": {
+    "file": "assets/boxicons-CSrLvhY_.eot",
+    "src": "node_modules/boxicons/fonts/boxicons.eot"
+  },
+  "node_modules/boxicons/fonts/boxicons.svg": {
+    "file": "assets/boxicons-Dp7W9qN3.svg",
+    "src": "node_modules/boxicons/fonts/boxicons.svg"
+  },
+  "node_modules/boxicons/fonts/boxicons.ttf": {
+    "file": "assets/boxicons-EIQNrSje.ttf",
+    "src": "node_modules/boxicons/fonts/boxicons.ttf"
+  },
+  "node_modules/boxicons/fonts/boxicons.woff": {
+    "file": "assets/boxicons-CTVby2V1.woff",
+    "src": "node_modules/boxicons/fonts/boxicons.woff"
+  },
+  "node_modules/boxicons/fonts/boxicons.woff2": {
+    "file": "assets/boxicons-CeGEncwm.woff2",
+    "src": "node_modules/boxicons/fonts/boxicons.woff2"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-JgRWt-C9.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "css": [
+      "assets/app-Bnph2-Xj.css"
+    ]
+  },
+  "resources/js/theme/anyar.js": {
+    "file": "assets/anyar-CPzuXSNx.js",
+    "name": "anyar",
+    "src": "resources/js/theme/anyar.js",
+    "isEntry": true
+  },
+  "resources/sass/app.scss": {
+    "file": "assets/app-ZTGNsFtH.css",
+    "src": "resources/sass/app.scss",
+    "isEntry": true
+  },
+  "resources/sass/components/buttons.scss": {
+    "file": "assets/buttons-J8CAK1va.css",
+    "src": "resources/sass/components/buttons.scss",
+    "isEntry": true
+  },
+  "resources/sass/components/cards.scss": {
+    "file": "assets/cards-CJ3tvr_M.css",
+    "src": "resources/sass/components/cards.scss",
+    "isEntry": true
+  },
+  "resources/sass/theme/anyar.scss": {
+    "file": "assets/anyar-DBX-Y4Lr.css",
+    "src": "resources/sass/theme/anyar.scss",
+    "isEntry": true
+  },
+  "storage/app/public/img/technology-trends.avif": {
+    "file": "assets/technology-trends-DvtOq1G5.avif",
+    "src": "storage/app/public/img/technology-trends.avif"
+  }
+}

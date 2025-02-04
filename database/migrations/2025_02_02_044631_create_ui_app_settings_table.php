@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name')->nullable(true);
             $table->string('about_us')->nullable(true);
-            $table->string('mision')->nullable(true);
-            $table->string('vision')->nullable(true);
-            $table->string('descripcion')->nullable(true);
+            $table->text('mision')->nullable(true);
+            $table->text('vision')->nullable(true);
+            $table->text('description')->nullable(true);
             $table->string('email')->nullable(true);
             $table->string('phone')->nullable(true);
             $table->string('country')->nullable(true);

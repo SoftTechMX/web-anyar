@@ -16,7 +16,10 @@
 				</p>
 			</div>
 
-			<x-theme.bootstrap5.table.index :collection="$users" />
+			<x-theme.bootstrap5.table.index
+				:collection="$users"
+				btn_show="{{ false }}"
+			/>
 			
 		</div>
 	</section>

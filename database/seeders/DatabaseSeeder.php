@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             PersonSeeder::class,
             SocialNetworkSeeder::class,
             CategorySeeder::class,
+            UiAppSettingsSeeder::class,
         ]);
     }
 }
