@@ -21,13 +21,13 @@
                 @forelse ($collection as $model)                    
                     <tr>
                         @foreach ($table_columns as $column_name)
-                            <td class="align-middle">
+                            <td class="align-middle text-nowrap">
                                 {{ $model->$column_name }}
                             </td>
                         @endforeach
                         <x-theme.bootstrap5.table.column.actions 
                             :model="$model" 
-                            :route="$table_name" 
+                            :route="$route" 
                             :btn_show="$btn_show" 
                             :btn_edit="$btn_edit" 
                             :btn_delete="$btn_delete"

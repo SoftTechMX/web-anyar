@@ -13,7 +13,7 @@ class Index extends Component
 {
     public $model;
     public $collection;
-    public $table_name;
+    public $route;
     public $table_columns;
 
     public $btn_show;
@@ -22,6 +22,7 @@ class Index extends Component
 
     public function __construct(
         ?LengthAwarePaginator $collection,
+        ?string $route = null,
         bool $btn_show = true,
         bool $btn_edit = true,
         bool $btn_delete = true,
@@ -33,8 +34,12 @@ class Index extends Component
         if($this->model)
         {
             $table = $this->model->getTable();
-            $this->table_name = Str::replace('_','-',$table);
             $this->table_columns = Schema::getColumnListing($table);
+
+            if($route)
+                $this->route = $route;
+            else
+                $this->route = Str::replace('_','-',$table);
         }
         else
         {
